@@ -17,9 +17,29 @@ class Breed(models.Model):
         return self.name
 
 
+class Species(models.Model):
+    """Species of pet"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    name = models.CharField(max_length=256,
+                            verbose_name="Вид животного")
+    code = models.CharField(max_length=256,
+                            verbose_name="Код")
+
+    def __str__(self):
+        return self.name
+
+
 class Pet(models.Model):
     """Main pet description"""
-
+    """
+    - питомец:
+        - кличка
+        - возраст
+        - пол
+        (от до (интервалы))
+        - привит, не прививки
+    - более подробный профиль питомца
+    """
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     name = models.CharField(max_length=256, verbose_name="Кличка")
     age = models.IntegerField(verbose_name="Возраст",
@@ -28,6 +48,8 @@ class Pet(models.Model):
                             verbose_name="Регистрационный документ",
                             related_name="pet_registration")
     photo = models.ImageField(upload_to='pets_photo', blank=True)
+    species = models.ForeignKey('pets.Species', on_delete=models.CASCADE,
+                                verbose_name="Вид животного")
     breed = models.ForeignKey('pets.Breed', on_delete=models.CASCADE,
                               verbose_name="Порода")
     owner = models.ForeignKey("petdocs.Owner", on_delete=models.CASCADE,

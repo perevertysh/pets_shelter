@@ -13,9 +13,9 @@ SECRET_KEY = '232nni20@#$%@G@#G*SA)gashg9$#GH#($GH#$G(HW$GH(HG(@#HG#(H$G#$@K'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'pettyhome.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', '192.168.0.104']
 
 # django_heroku.settings(locals())
 
@@ -120,8 +120,8 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = 'http://127.0.0.1/'
+MEDIA_ROOT = '/var/www/pettyhome/media'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':

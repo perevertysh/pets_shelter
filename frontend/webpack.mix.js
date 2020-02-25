@@ -10,20 +10,21 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+
 mix.webpackConfig({
-    devtool: "inline-source-map",
     resolve: {
         modules: [
             path.resolve('./node_modules')
         ],
         alias: {
-            core: path.resolve('./core/'),
+            core: path.resolve('./js/'),
             pages: path.resolve('./pages/js/'),
         }
     }
-}).setResourceRoot('../')
-  .js('./core/app.js', '../templates/js/')
-  .sass('./pages/scss/app.scss', '../templates/css/')
+});
+mix.setResourceRoot('../')
+    .js('./js/app.js', './templates/js/')
+    .sass('./scss/app.scss', './templates/css/')
   
 // Full API
 // mix.js(src, output);

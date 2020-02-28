@@ -1,7 +1,5 @@
 import os
 import environ
-import dj_database_url
-import django_heroku
 
 
 env = environ.Env()
@@ -127,7 +125,7 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = 'http://127.0.0.1/'
+MEDIA_URL = 'http://127.0.0.1/media/'
 MEDIA_ROOT = '/var/www/pettyhome/'
 
 REST_FRAMEWORK = {

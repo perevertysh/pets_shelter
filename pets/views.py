@@ -7,7 +7,7 @@ from rest_framework import pagination
 
 from .models import Pet
 
-from .serializers import PetSerializer
+from .serializers import PetSerializer, SheltingPetsSerializer
 
 
 class IndexPageView(TemplateView):
@@ -44,3 +44,9 @@ class PetViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     serializer_class = PetSerializer
     queryset = Pet.objects.all()
+
+
+class SheltingPetsViewSet(viewsets.ModelViewSet):
+    pagination_class = pagination.PageNumberPagination
+    serializer_class = SheltingPetsSerializer
+    queryset = Pet.objects.filter(status__code="shelted")

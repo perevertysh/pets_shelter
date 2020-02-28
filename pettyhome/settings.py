@@ -1,6 +1,12 @@
 import os
+import environ
 import dj_database_url
 import django_heroku
+
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -13,10 +19,9 @@ SECRET_KEY = '232nni20@#$%@G@#G*SA)gashg9$#GH#($GH#$G(HW$GH(HG(@#HG#(H$G#$@K'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '0.0.0.0', 'pettyhome.herokuapp.com']
-
+ALLOWED_HOSTS = ["127.0.0.1"]
 # django_heroku.settings(locals())
 
 # Application definition
@@ -70,14 +75,16 @@ WSGI_APPLICATION = 'pettyhome.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'pettyhome',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
     }
 }
+
+
 
 # import dj_database_url
 # DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}

@@ -59,7 +59,7 @@ class Pet(models.Model):
     doc = models.ForeignKey('petdocs.Registration', on_delete=models.CASCADE,
                             verbose_name="Регистрационный документ",
                             related_name="pet_registration")
-    photo = models.ImageField(upload_to='pets_photo', blank=True)
+    photo = models.ImageField(upload_to="pets_photo", blank=True)
     species = models.ForeignKey('pets.Species', on_delete=models.CASCADE,
                                 verbose_name="Вид животного")
     breed = models.ForeignKey('pets.Breed', on_delete=models.CASCADE,

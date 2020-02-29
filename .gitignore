@@ -1,2 +1,4 @@
 /.idea/
 /staticfiles/
+/pettyhome/.env
+/bin/.env

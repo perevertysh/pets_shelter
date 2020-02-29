@@ -45,3 +45,8 @@ class PetShelteringRequest(models.Model):
     middlename = models.CharField(max_length=256, verbose_name=_("Отчество"))
     lastname = models.CharField(max_length=256, verbose_name=_("Фамилия"))
     comment = models.TextField(max_length=500, verbose_name=_("Комментарии"))
+
+    pet = models.ForeignKey("pets.Pet", on_delete=models.CASCADE,
+                            verbose_name=_("Питомец"),
+                            null=True, blank=True,
+                            related_name="pet_sheltering_request_pet")

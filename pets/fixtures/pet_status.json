@@ -1,0 +1,26 @@
+[
+  {
+    "model": "pets.petstatus",
+    "pk": "076ea473-532c-443e-b7ee-f60b060d6bb2",
+    "fields": {
+      "name": "хотят приютить",
+      "code": "wait_home"
+    }
+  },
+  {
+    "model": "pets.petstatus",
+    "pk": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
+    "fields": {
+      "name": "без дома",
+      "code": "out_home"
+    }
+  },
+  {
+    "model": "pets.petstatus",
+    "pk": "fd9e6009-0294-43a1-81ab-e787ad65496d",
+    "fields": {
+      "name": "приютили",
+      "code": "at_home"
+    }
+  }
+]

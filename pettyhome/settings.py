@@ -1,7 +1,6 @@
 import os
 import environ
 
-
 env = environ.Env()
 # reading .env file
 environ.Env.read_env()
@@ -17,7 +16,7 @@ SECRET_KEY = '232nni20@#$%@G@#G*SA)gashg9$#GH#($GH#$G(HW$GH(HG(@#HG#(H$G#$@K'
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "0.0.0.0", "localhost", env("HOST")]
 # django_heroku.settings(locals())
@@ -32,9 +31,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'petdocs',
     'pets',
     'relocation',
+
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,7 @@ ROOT_URLCONF = 'pettyhome.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,8 +82,6 @@ DATABASES = {
         'PORT': env("DB_PORT"),
     }
 }
-
-
 
 # import dj_database_url
 # DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
@@ -130,6 +129,7 @@ MEDIA_ROOT = '/var/www/pettyhome/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
-        'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10
+        'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+
 }

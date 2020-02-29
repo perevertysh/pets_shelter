@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+    <b-navbar>
+        <b-navbar-nav>
+            <b-nav-item href='/'>Питомцы </b-nav-item>
+            <!-- <b-nav-item href='/about'>О нас</b-nav-item>
+            <b-nav-item href='/contacts'>Контакты</b-nav-item> -->
+        </b-navbar-nav>
+    </b-navbar>
+    <main class="main-content">
+        <router-view></router-view>
+    </main>
+</div>
+{% endblock %}

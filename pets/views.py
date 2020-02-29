@@ -8,6 +8,11 @@ from rest_framework import pagination
 from .models import Pet
 
 from .serializers import PetSerializer
+from django.shortcuts import render
+
+
+def home(request):
+    return render(request, 'main.html', {})
 
 
 class IndexPageView(TemplateView):

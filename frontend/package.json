@@ -1,12 +1,26 @@
 {
-  "name": "pets_frontend",
+  "name": "shelter_frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "author": "junior",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.2",
+    "webpack-cli": "^3.3.11"
+  },
   "dependencies": {
     "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.5.0",
     "cross-env": "^7.0.0",
     "laravel-mix": "^5.0.1",
+    "lodash": "^4.17.15",
+    "luxon": "^1.22.0",
     "moment": "^2.24.0",
     "resolve-url-loader": "^3.1.1",
     "sass-loader": "^8.0.2",
@@ -15,13 +29,5 @@
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.1.2",
     "webpack": "^4.41.6"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-  },
-  "author": "junior",
-  "license": "ISC"
+  }
 }

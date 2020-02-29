@@ -65,23 +65,23 @@ export default {
     },
     methods: {
         fetch() {
-            rest[this.model].get({page: this.curPage, status__code: 'unshelter'}).then(res => {
+            rest[this.model].get({page: this.curPage}).then(res => {
                 if (res.data.results.length) {
                     this.items = res.data.results;
-                    this.items = this.items.concat(this.items.concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items));
+                    // this.items = this.items.concat(this.items.concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items));
                     this.totalPage = Math.ceil(res.data.count / this.perPage);
                 }
                 // test
-                else {
-                    this.items = [
-                        {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
-                        {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
-                        {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
-                        {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
-                        {id:'1'},{id:'1'},{id:'1'},{id:'1'},
-                    ];
-                    this.totalPage = Math.ceil(this.items.length / this.perPage);
-                }
+                // else {
+                //     this.items = [
+                //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
+                //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
+                //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
+                //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
+                //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},
+                //     ];
+                //     this.totalPage = Math.ceil(this.items.length / this.perPage);
+                // }
             }). catch(err => {
                 console.error(err);
             });

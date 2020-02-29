@@ -14,10 +14,8 @@
             align="right"
             class="mx-2 mt-2"
             v-model="curPage"
-            :total-rows="totalPage"
+            :total-rows="totalRows"
             :per-page="perPage"
-            first-number
-            last-number
         ></b-pagination>
         <shelter-pet v-model="selectId"/>
     </div>
@@ -44,10 +42,10 @@ export default {
         return {
             items: null,
             selectId: null,
-            countCol: 6,
+            countCol: 5,
             curPage: 1,
-            perPage: 18,
-            totalPage: 0,
+            perPage: 10,
+            totalRows: 0,
         };
     },
     computed: {
@@ -65,11 +63,11 @@ export default {
     },
     methods: {
         fetch() {
-            rest[this.model].get({page: this.curPage}).then(res => {
+            rest[this.model].get({page: this.curPage, }).then(res => {
                 if (res.data.results.length) {
                     this.items = res.data.results;
                     // this.items = this.items.concat(this.items.concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items));
-                    this.totalPage = Math.ceil(res.data.count / this.perPage);
+                    this.totalRows = res.data.count;
                 }
                 // test
                 // else {
@@ -80,7 +78,7 @@ export default {
                 //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},{id:'1'},
                 //         {id:'1'},{id:'1'},{id:'1'},{id:'1'},
                 //     ];
-                //     this.totalPage = Math.ceil(this.items.length / this.perPage);
+                //     this.totalRows = this.items.length;
                 // }
             }). catch(err => {
                 console.error(err);

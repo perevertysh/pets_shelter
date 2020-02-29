@@ -5,7 +5,7 @@
             :title="item.name"
             :style="{
                 'white-space': 'nowrap', 
-                width: '160px', 
+                width: '180px', 
                 display: 'inline-block'
             }"
         >

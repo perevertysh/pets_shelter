@@ -1,15 +1,11 @@
 {% extends "index.html" %}
 {% block content %}
 <div>
-    <b-navbar>
-        <b-navbar-nav>
-            <b-nav-item href='/'>Питомцы </b-nav-item>
-            <!-- <b-nav-item href='/about'>О нас</b-nav-item>
-            <b-nav-item href='/contacts'>Контакты</b-nav-item> -->
-        </b-navbar-nav>
+    <b-navbar type="dark" variant="success">
+        <b-navbar-brand href='/'>Питомцы </b-navbar-brand>
     </b-navbar>
-    <main class="main-content">
-        <router-view></router-view>
+    <main class="main-content mt-2 mx-2">
+        <router-view/>
     </main>
 </div>
 {% endblock %}

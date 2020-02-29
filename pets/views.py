@@ -9,6 +9,12 @@ from rest_framework import filters
 from .models import Pet
 
 from .serializers import PetSerializer, SheltingPetsSerializer
+from .serializers import PetSerializerr, SheltingPetsSerializer
+from django.shortcuts import render
+
+
+def home(request):
+    return render(request, 'main.html', {})
 
 from django_filters import rest_framework as df_filters
 

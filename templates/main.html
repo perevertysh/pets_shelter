@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+    <b-navbar type="dark" variant="success">
+        <b-navbar-brand href='/'>Питомцы </b-navbar-brand>
+    </b-navbar>
+    <main class="main-content mt-2 mx-2">
+        <router-view/>
+    </main>
+</div>
+{% endblock %}

@@ -18,6 +18,7 @@
             :per-page="perPage"
         ></b-pagination>
         <shelter-pet v-model="selectId"/>
+        <prodile-pet v-model="selectId"/>
     </div>
 </template>
 
@@ -25,12 +26,14 @@
 import rest from './../js/rest'
 import PetCard from './pet_card'
 import ShelterPet from './shelter_pet'
+import ProdilePet from './pet_profile'
 
 export default {
     name: 'Pets',
     components: {
         PetCard,
         ShelterPet,
+        ProdilePet,
     },
     props:{
         model: {

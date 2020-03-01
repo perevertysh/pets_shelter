@@ -2,8 +2,9 @@
     <b-modal 
         id="shelter-modal"
         title="Заявка"
-        @hidden='reset()'
         @ok="submit()"
+        ok-only
+        ok-title='Отправить'
     >
         <b-form>
             <b-form-group
@@ -49,9 +50,10 @@
             <b-form-group
                 label='Комментарий:'
             >
-                <b-form-input
+                <b-form-textarea
                     v-model="item.comment"
                     placeholder="Оставьте комментарий"
+                    rows='3'
                 />
             </b-form-group>
         </b-form>
@@ -84,7 +86,6 @@ export default {
                     this.animal = {};
                     return;
                 }
-                this.$bvModal.show('shelter-modal');
                 this.$set(this, 'item', {pet: val.id});
                 this.$set(this, 'animal', val);
             },
@@ -99,9 +100,6 @@ export default {
                 console.error(err);
             });
         },
-        reset() {
-            this.$emit('input', null);
-        }
     }
 }
 </script>

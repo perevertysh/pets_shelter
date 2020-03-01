@@ -75,27 +75,26 @@ export default {
         return {
             item: {},
             animal: {},
-            modalShelter: false,
         };
+    },
+    mounted: function() {
+        if (this.value) {
+            this.$set(this, 'item', {pet: this.value.id});
+            this.$set(this, 'animal', this.value);
+        }
     },
     watch: {
         value: {
             handler(val) {
-                if (!val) {
-                    this.item = {};
-                    this.animal = {};
-                    return;
-                }
-                this.$set(this, 'item', {pet: val.id});
-                this.$set(this, 'animal', val);
+                this.$set(this, 'item', {pet: this.value.id});
+                this.$set(this, 'animal', this.value);
             },
             deep: true,
-        },
+        }
     },
     methods: {
         submit() {
-            rest.pet_shelter_req.post(this.item).then(res => {
-
+            rest.pet_shelter_req.post(this.item).then(res =>{
             }).catch(err => {
                 console.error(err);
             });

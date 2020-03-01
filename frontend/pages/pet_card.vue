@@ -7,7 +7,7 @@
             :title="item.name"
             :style="{
                 'white-space': 'nowrap', 
-                width: '180px', 
+                width: size + 'px', 
                 display: 'inline-block'
             }"
         >
@@ -27,11 +27,21 @@ export default {
             type: Object,
             default: null,
         },
+        readOnly: {
+            type: Boolean,
+            default: false,
+        },
+        size: {
+            type: Number,
+            default: 180,
+        },
     },
     methods: {
         select() {
-            this.$bvModal.show('profile-modal');
-            this.$emit('input', this.item);
+            // this.$bvModal.show('profile-modal');
+            // this.$emit('input', this.item);
+            if (!this.readOnly)
+                this.$router.push({name: 'pet.edit',  params: { id: this.item.id }});
         },
     }
 }

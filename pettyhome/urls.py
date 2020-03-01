@@ -9,7 +9,7 @@ from django.views.generic.base import TemplateView
 
 from rest_framework import routers
 
-from pets.views import IndexPageView, home
+from pets.views import home
 
 from pets.urls import routes as pets_routes
 from petdocs.urls import routes as petdocs_routes
@@ -20,10 +20,10 @@ for route in (pets_routes
               + petdocs_routes):
     router.register(*route)
 
+from django.conf.urls import include, url
+
 urlpatterns = [
-    # path('', IndexPageView.as_view()),
-    path('', home),
-    # url(r'', home, name='home'),
+    url('app/', home),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls',

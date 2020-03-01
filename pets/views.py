@@ -20,32 +20,6 @@ def home(request):
 from django_filters import rest_framework as df_filters
 
 
-class IndexPageView(TemplateView):
-    template_name = 'index.html'
-
-
-class PetListView(ListView):
-    model = Pet
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        get_params = self.request.GET.dict()
-
-        # search
-        if get_params.get('q'):
-            qs = qs.filter(name__icontains=get_params.get('q'))
-
-        return qs
-
-
-class PetView(DetailView):
-    model = Pet
-
-
-class ContactsView(TemplateView):
-    template_name = 'contacts.html'
-
-
 class BreedViewSet(viewsets.ModelViewSet):
     serializer_class = BreedSerializer
     queryset = Breed.objects.all()

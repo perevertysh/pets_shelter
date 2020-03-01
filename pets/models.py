@@ -6,6 +6,10 @@ from django.db import models
 from django.urls import reverse
 
 
+class Gender(models.Model):
+    pass
+
+
 class Breed(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     name = models.CharField(max_length=256,

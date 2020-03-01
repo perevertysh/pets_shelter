@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic import (ListView,
                                   DetailView)
@@ -6,14 +7,15 @@ from rest_framework import viewsets
 from rest_framework import pagination
 from rest_framework import filters
 
-from .models import Pet
-
-from .serializers import PetSerializer, SheltingPetsSerializer
-from django.shortcuts import render
+from .models import (Pet, Breed, PetStatus, Species)
+from .serializers import (PetSerializer, SheltingPetsSerializer,
+                          BreedSerializer, PetStatusSerializer,
+                          SpeciesSerializer)
 
 
 def home(request):
     return render(request, 'main.html', {})
+
 
 from django_filters import rest_framework as df_filters
 
@@ -45,11 +47,22 @@ class ContactsView(TemplateView):
 
 
 class BreedViewSet(viewsets.ModelViewSet):
-    pass
+    serializer_class = BreedSerializer
+    queryset = Breed.objects.all()
+
+
+class PetStatusViewSet(viewsets.ModelViewSet):
+    serializer_class = PetStatusSerializer
+    queryset = PetStatus.objects.all()
+
+
+class SpeciesViewSet(viewsets.ModelViewSet):
+    serializer_class = SpeciesSerializer
+    queryset = Species.objects.all()
 
 
 class PetViewSet(viewsets.ModelViewSet):
-    # pagination_class = pagination.PageNumberPagination
+    pagination_class = pagination.PageNumberPagination
     serializer_class = PetSerializer
     queryset = Pet.objects.all()
     filter_backends = [filters.OrderingFilter, filters.SearchFilter,

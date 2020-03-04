@@ -1,0 +1,68 @@
+[
+  {
+    "model": "petdocs.registration",
+    "pk": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1",
+    "fields": {
+      "reg_num": "\u043f24022020",
+      "date": "2020-02-24",
+      "cage": "\u041065\u0444"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "0f5f3ce6-de66-4161-9628-6e713166d456",
+    "fields": {
+      "reg_num": "\u043d01032020",
+      "date": "2020-03-01",
+      "cage": "\u042013"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "149d7085-cdad-478a-9b75-3d74226a7152",
+    "fields": {
+      "reg_num": "\u044129022020",
+      "date": "2020-02-29",
+      "cage": "\u041a8"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f",
+    "fields": {
+      "reg_num": "\u044123022020",
+      "date": "2020-02-23",
+      "cage": "F456d"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "97d9f821-77b2-4b6a-8bf5-3c49b9663361",
+    "fields": {
+      "reg_num": "\u043a29022020",
+      "date": "2020-02-29",
+      "cage": "\u04212"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "af3e10fb-edb0-4df7-957b-0288016d6e94",
+    "fields": {
+      "reg_num": "\u044229022020",
+      "date": "2020-02-29",
+      "cage": "\u04113"
+    }
+  },
+  {
+    "model": "petdocs.petshelteringrequest",
+    "pk": "0d2ae2b5-e24a-4ab9-8737-633fb78d2292",
+    "fields": {
+      "phone_num": "+75234561232",
+      "firstname": "fd",
+      "middlename": "f",
+      "lastname": "f",
+      "comment": "asdf",
+      "pet": null
+    }
+  }
+]

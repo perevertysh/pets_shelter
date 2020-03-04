@@ -1,0 +1,32 @@
+.tail {
+    background-color: #D9CDB0;
+    box-shadow: 0px 4px 10px rgba(34, 63, 44, 0.89);
+    border-radius: 10px;
+
+    .row {
+        padding: 10px;
+
+        #image {
+            img {
+                max-width: 200px;
+                max-height: 150px;
+            }
+        }
+
+        .btn {
+            max-height: 40px;
+            max-width: 115px;
+            font-size: 12px;
+            color: black;
+            border-color: transparent;
+            border-radius: 20px;
+
+            &.wait {
+                background-color: #DD8A5C;
+            }
+            &.lucky {
+                background-color: #80B889;
+            }   
+        }
+    }
+}

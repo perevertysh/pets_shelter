@@ -2,6 +2,7 @@
 @import 'node_modules/bootstrap-vue/src/index.scss';
 @import 'node_modules/bootstrap-vue/src/icons.scss';
 @import 'petslist.scss';
+@import 'petcard.scss';
 
 @font-face {
     font-family: "RuslanDisplay";
@@ -30,6 +31,23 @@ body {
     }
 }
 
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .footer  {
     background-color: rgba($color:#223F2C, $alpha: 0.89);
+    color: #9BD288;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

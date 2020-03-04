@@ -3,7 +3,11 @@
         <b-container variant="info" v-if="items && items.length">
             <b-row v-for="indexRow in countRows" :key="indexRow" class="my-4">
                 <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
-                    <pet-card :item="items[calcIndex(indexCol, indexRow)]"/>
+                    <pet-card
+                        v-if="items[calcIndex(indexCol, indexRow)]"
+                        :item="items[calcIndex(indexCol, indexRow)]"
+                        v-model='selectItem'
+                    />
                 </b-col>
             </b-row>
         </b-container>
@@ -18,23 +22,21 @@
             :per-page="perPage"
             first-number
             last-number
-        >
-            <template v-slot:page="{ page, active }">
-                <span v-if="active">{{ page }}</span>
-                <span v-else>{{ page }}</span>
-            </template>
-        </b-pagination>
+        ></b-pagination>
+        <shelter-pet v-model="selectItem"/>
     </div>
 </template>
 
 <script>
 import rest from './../js/rest'
 import PetCard from './pet_card'
+import ShelterPet from './shelter_pet'
 
 export default {
     name: 'Pets',
     components: {
         PetCard,
+        ShelterPet,
     },
     props:{
         model: {
@@ -45,6 +47,7 @@ export default {
     data: function() {
         return {
             items: null,
+            selectItem: null,
             countCol: 3,
             curPage: 1,
             perPage: 6,

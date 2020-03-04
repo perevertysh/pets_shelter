@@ -12,6 +12,7 @@
             >
                 <b-form-input
                     v-model="animal.name"
+                    type='text'
                     disabled
                 />
             </b-form-group>
@@ -20,6 +21,7 @@
             >
                 <b-form-input
                     v-model="item.lastname"
+                    type='text'
                     placeholder="Введите фамилию"
                 />
             </b-form-group>
@@ -28,6 +30,7 @@
             >
                 <b-form-input
                     v-model="item.firstname"
+                    type='text'
                     placeholder="Введите имя"
                 />
             </b-form-group>
@@ -36,6 +39,7 @@
             >
                 <b-form-input
                     v-model="item.middlename"
+                    type='text'
                     placeholder="Введите отчество"
                 />
             </b-form-group>
@@ -44,6 +48,16 @@
             >
                 <b-form-input
                     v-model="item.phone_num"
+                    type='tel'
+                    placeholder="Введите номер телефона"
+                />
+            </b-form-group>
+            <b-form-group
+                label='E-mail:'
+            >
+                <b-form-input
+                    v-model="item.phone_num"
+                    type='email '
                     placeholder="Введите номер телефона"
                 />
             </b-form-group>

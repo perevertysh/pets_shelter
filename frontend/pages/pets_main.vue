@@ -11,12 +11,19 @@
             Приют пуст
         </div>
         <b-pagination
-            align="right"
+            align="center"
             class="mx-2 mt-2"
             v-model="curPage"
             :total-rows="totalRows"
             :per-page="perPage"
-        ></b-pagination>
+            first-number
+            last-number
+        >
+            <template v-slot:page="{ page, active }">
+                <span v-if="active">{{ page }}</span>
+                <span v-else>{{ page }}</span>
+            </template>
+        </b-pagination>
     </div>
 </template>
 
@@ -38,9 +45,9 @@ export default {
     data: function() {
         return {
             items: null,
-            countCol: 5,
+            countCol: 3,
             curPage: 1,
-            perPage: 10,
+            perPage: 6,
             totalRows: 0,
         };
     },
@@ -59,7 +66,7 @@ export default {
     },
     methods: {
         fetch() {
-            rest[this.model].get({page: this.curPage, }).then(res => {
+            rest[this.model].get({page: this.curPage, page_size: this.perPage}).then(res => {
                 if (res.data.results.length) {
                     this.items = res.data.results;
                     // this.items = this.items.concat(this.items.concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items));

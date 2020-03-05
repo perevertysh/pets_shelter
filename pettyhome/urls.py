@@ -1,10 +1,12 @@
 from django.contrib import admin
 
-from django.urls import include, path
+
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
 # from django.conf.url import url
+from django.urls import path
+from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 
 from rest_framework import routers
@@ -23,7 +25,8 @@ for route in (pets_routes
 from django.conf.urls import include, url
 
 urlpatterns = [
-    url('app/', home),
+    url('app', home),
+    url(r'^$', lambda request: redirect('app/', permanent=False)),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls',

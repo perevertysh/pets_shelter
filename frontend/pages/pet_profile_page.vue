@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         loadData() {
-            rest.petslist.get(this.$route.params['id']).then(res => {
+            rest.pet.get(this.$route.params['id']).then(res => {
                 this.item = res.data;
                 this.loadDetailInfo();
             }).catch(err => {

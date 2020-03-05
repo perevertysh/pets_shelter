@@ -32,7 +32,7 @@ export default {
     props:{
         model: {
             type: String,
-            default: 'petslist',
+            default: 'pet',
         }
     },
     data: function() {

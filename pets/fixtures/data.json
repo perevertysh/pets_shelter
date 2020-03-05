@@ -1,5 +1,21 @@
 [
   {
+    "model": "pets.gender",
+    "pk": "0045491e-e44e-410d-8efa-4168e3b41721",
+    "fields": {
+      "name": "\u043c\u0430\u043b\u044c\u0447\u0438\u043a",
+      "code": "m"
+    }
+  },
+  {
+    "model": "pets.gender",
+    "pk": "6b8a3721-457b-4ce8-ae29-2fddd71a2d7a",
+    "fields": {
+      "name": "\u0434\u0435\u0432\u043e\u0447\u043a\u0430",
+      "code": "f"
+    }
+  },
+  {
     "model": "pets.breed",
     "pk": "23a6844a-42cc-48c4-953a-b13ba8be8292",
     "fields": {
@@ -107,7 +123,7 @@
       "breed": "ce8e2940-9a60-4de7-85f7-7e49759fa080",
       "owner": null,
       "status": "076ea473-532c-443e-b7ee-f60b060d6bb2",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   },
   {
@@ -122,7 +138,7 @@
       "breed": "976df73f-aa7e-436d-8898-a24dc6f3c499",
       "owner": null,
       "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   },
   {
@@ -137,7 +153,7 @@
       "breed": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e",
       "owner": null,
       "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   },
   {
@@ -152,7 +168,7 @@
       "breed": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d",
       "owner": null,
       "status": "076ea473-532c-443e-b7ee-f60b060d6bb2",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   },
   {
@@ -167,7 +183,7 @@
       "breed": "23a6844a-42cc-48c4-953a-b13ba8be8292",
       "owner": null,
       "status": "fd9e6009-0294-43a1-81ab-e787ad65496d",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   },
   {
@@ -182,7 +198,7 @@
       "breed": "c8455311-4159-4324-b248-611555a3550e",
       "owner": null,
       "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
-      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+      "gender": "0045491e-e44e-410d-8efa-4168e3b41721"
     }
   }
 ]

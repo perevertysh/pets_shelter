@@ -48,6 +48,14 @@
                 />
             </b-form-group>
             <b-form-group
+                label='Эл. почта:'
+            >
+                <b-form-input
+                    v-model="item.email"
+                    placeholder="Введите электронный адрес"
+                />
+            </b-form-group>
+            <b-form-group
                 label='Комментарий:'
             >
                 <b-form-textarea

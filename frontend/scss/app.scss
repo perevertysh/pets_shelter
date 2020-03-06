@@ -1,7 +1,53 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 @import 'node_modules/bootstrap-vue/src/icons.scss';
+@import 'petslist.scss';
+@import 'petcard.scss';
+
+@font-face {
+    font-family: "RuslanDisplay";
+    src: url('/static/fonts/RuslanDisplay-Regular.ttf') format('truetype');
+}
 
 body {
-    background-color: rgba($color: #fff, $alpha: 0.62);
+    background-color: #B2C3B3;
+    font-family: "RuslanDisplay";
+}
+
+.navbar {
+    background-color: rgba($color:#223F2C, $alpha: 0.89);
+    .navbar-brand {
+        background-color: #9BD288;
+    }
+    .header-btn {
+        background-color: #9BD288;
+        color: black;
+    }
+    .header-title {
+        color: #CDAD6D;
+        font-size: xx-large;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer  {
+    background-color: rgba($color:#223F2C, $alpha: 0.89);
+    color: #9BD288;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

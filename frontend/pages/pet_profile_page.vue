@@ -11,12 +11,13 @@
             <b-col key='info'>
                 <div>
                     Вид животного: {{species}}<br/>
+                    Пол: {{item.sex}}<br/>
                     Порода: {{breed}}<br/>
                     Возраст: {{item.age + " " + make_word_end()}}<br/>
                     Регистрационный документ: {{doc}}<br/>
                     Статус: {{item.status ? 'Приютили' : 'Не приютили'}}
                 </div>
-                <b-button class="mt-3" variant="primary" @click="shelder()">Приютить</b-button>
+                <b-button class="mt-3" variant="primary" @click="shelter()">Приютить</b-button>
             </b-col>
         </b-row>
         <shelter-pet v-model="item"/>
@@ -25,11 +26,15 @@
 
 <script>
 import rest from './../js/rest'
+import functions from './js/functions'
 import ShelterPet from './shelter_pet'
 import PetCard from './pet_card'
 
 export default {
     name: 'ProfilePet',
+    mixins: [
+        functions,
+    ],
     components: {
         ShelterPet,
         PetCard,
@@ -66,22 +71,6 @@ export default {
             rest.doc.get(this.  item.doc).then(res => {
                 this.doc = res.data.reg_num;
             }).catch(err => console.error(err));
-        },
-        shelder() {
-            this.$bvModal.show('shelter-modal');
-        },
-        make_word_end() {
-            let word = "лет";
-            let n = this.item.age;
-            if (n > 99)
-                n = n % 100;
-            if (4 < n && n < 21)
-                word = "лет";
-            else if (n % 10 == 1)
-                word = "год";
-            else if (1 < n % 10 &&  n % 10 < 5)
-                word = "года";
-            return word;
         },
         clear() {
             this.species = null;

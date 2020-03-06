@@ -1,0 +1,15 @@
+.pagination {
+    font-size: 30px;
+    .page-item {
+        .page-link {
+            color: rgba($color:#223F2C, $alpha: 0.89);
+            background-color: transparent;
+            border-color: transparent;
+        }
+        &.active {
+            .page-link {
+                color: #F0F299;
+            }
+        }
+    }
+}

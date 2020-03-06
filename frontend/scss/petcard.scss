@@ -9,8 +9,15 @@
 
         #image {
             img {
-                max-width: 180px;
+                max-width: 200px;
                 max-height: 150px;
+            }
+        }
+        #info {
+            display: flex;
+            flex-direction: column;
+            .btn {
+                align-self: flex-end;
             }
         }
 

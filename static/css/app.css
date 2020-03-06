@@ -13517,8 +13517,17 @@ input[type=color].form-control:disabled {
 }
 
 .tail .row #image img {
-  max-width: 180px;
+  max-width: 200px;
   max-height: 150px;
+}
+
+.tail .row #info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tail .row #info .btn {
+  align-self: flex-end;
 }
 
 .tail .row .btn {

@@ -1,17 +1,17 @@
 <template>
-    <b-container class="tail" v-if="item">
+    <b-container class="tail" v-if="item" @click="select()">
         <b-row>
             <b-col key='image' id='image' sm="7">
-                <b-img :src='item.photo' fluid rounded @click="select()"/>
+                <b-img :src='item.photo' fluid rounded/>
             </b-col>
             <b-col key='info' id='info' sm="5">
                 <div>
                     {{item.name}}<br/>
-                    {{item.sex}}<br/>
+                    {{item.gender.name}}<br/>
                     {{item.age + " " + make_word_end()}}
                 </div>
                 <b-button 
-                    class="btn" 
+                    class="btn"
                     :class="{
                         wait: !item.status,
                         lucky: item.status,

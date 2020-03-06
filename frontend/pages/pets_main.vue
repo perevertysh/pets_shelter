@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-container variant="info" v-if="items && items.length">
+        <b-container fluid variant="info" v-if="items && items.length">
             <b-row v-for="indexRow in countRows" :key="indexRow" class="my-4">
                 <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
                     <pet-card
@@ -9,6 +9,7 @@
                         v-model='selectItem'
                     />
                 </b-col>
+                <div class="w-100"></div>
             </b-row>
         </b-container>
         <div v-else>

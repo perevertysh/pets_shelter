@@ -4,7 +4,7 @@ from rest_framework import serializers
 
 from petdocs.models import Owner, Registration
 from petdocs.serializers import RegistrationSerializer
-from .models import Pet, Breed, Species, PetStatus
+from .models import Pet, Breed, Species, PetStatus, Gender
 
 
 class BreedSerializer(serializers.ModelSerializer):
@@ -22,6 +22,12 @@ class SpeciesSerializer(serializers.ModelSerializer):
 class PetStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = PetStatus
+        fields = "__all__"
+
+
+class GenderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Gender
         fields = "__all__"
 
 
@@ -54,6 +60,7 @@ class PetSerializer(serializers.ModelSerializer):
         required=False,
         allow_empty=True,
         label=_("Порода"))
+    gender = GenderSerializer()
 
     class Meta:
         model = Pet

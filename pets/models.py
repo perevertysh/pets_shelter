@@ -66,11 +66,13 @@ class Pet(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     name = models.CharField(max_length=256, verbose_name="Кличка")
     age = models.IntegerField(verbose_name="Возраст",
-                              validators=[validators.MaxValueValidator(100)])
+                              validators=[validators.MinValueValidator(0),
+                                          validators.MaxValueValidator(100)])
     doc = models.ForeignKey('petdocs.Registration', on_delete=models.CASCADE,
                             verbose_name="Регистрационный документ",
                             related_name="pet_registration")
-    photo = models.ImageField(upload_to="img", blank=True)
+    photo = models.ImageField(upload_to="img", blank=True,
+                              verbose_name=_("Фото"))
     species = models.ForeignKey('pets.Species', on_delete=models.CASCADE,
                                 verbose_name="Вид животного")
     breed = models.ForeignKey('pets.Breed', on_delete=models.CASCADE,

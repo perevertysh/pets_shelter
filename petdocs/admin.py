@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.forms import ModelForm
 
-from .models import Registration, Owner
+from .models import Registration, Owner, PetShelteringRequest
 
 
 class RegistrationForm(ModelForm):
@@ -16,4 +16,9 @@ class RegistrationAdmin(admin.ModelAdmin):
 
 @admin.register(Owner)
 class OwnerAdmin(admin.ModelAdmin):
+    """Владелец питомца"""
+
+
+@admin.register(PetShelteringRequest)
+class PetShelteringRequestAdmin(admin.ModelAdmin):
     """Владелец питомца"""

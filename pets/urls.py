@@ -1,16 +1,16 @@
 from django.urls import include, path
 
-from .views import (PetViewSet,
+from .views import (home,
+                    PetViewSet,
                     BreedViewSet,
                     PetStatusViewSet,
                     SpeciesViewSet)
 
 routes = [
-    (r'petslist', PetViewSet),
+    (r'pet', PetViewSet),
     (r'breed', BreedViewSet),
     (r'pet_status', PetStatusViewSet),
     (r'species', SpeciesViewSet)
 ]
 
-urlpatterns = [ ]
-
+urlpatterns = []

@@ -67,7 +67,7 @@ class PetSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class SheltingPetsSerializer(serializers.ModelSerializer):
+class ShelteringPetsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet
         fields = ["name", "photo", "status"]

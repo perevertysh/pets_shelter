@@ -110,7 +110,6 @@ export default {
     watch: {
         value: {
             handler(val) {
-                console.log(val);
                 this.$set(this, 'item', {pet: val ? val.id : val});
                 this.$set(this, 'animal', val);
             },

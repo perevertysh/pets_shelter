@@ -15,7 +15,7 @@ Vue.use(IconsPlugin);
 Vue.use(NavbarPlugin);
 Vue.use(ModalPlugin);
 
-Vue.component('b-pagination', BPagination)
+Vue.component('b-pagination', BPagination);
 
 const app = new Vue({
     router,

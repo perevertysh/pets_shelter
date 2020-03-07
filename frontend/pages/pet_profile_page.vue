@@ -14,7 +14,7 @@
                     Регистрационный документ: {{item.doc.reg_num}}<br/>
                     Статус: {{!item.status ? 'Не приютили' : item.status.name}}
                 </div>
-                <b-button class="mt-3" variant="primary" @click="shelter()">Приютить</b-button>
+                <b-button class="mt-3 btn" variant="primary" @click="shelter()">Приютить</b-button>
             </b-col>
         </b-row>
         <shelter-pet v-model="item"/>

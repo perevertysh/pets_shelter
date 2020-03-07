@@ -38,7 +38,7 @@ class SpeciesViewSet(viewsets.ModelViewSet):
 class PetViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     serializer_class = PetSerializer
-    queryset = Pet.objects.all()
+    queryset = Pet.objects.all().order_by("doc__date")
     filter_backends = [filters.OrderingFilter, filters.SearchFilter,
                        df_filters.DjangoFilterBackend]
     search_fields = (

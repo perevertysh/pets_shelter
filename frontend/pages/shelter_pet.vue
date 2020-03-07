@@ -1,84 +1,92 @@
 <template>
     <b-modal 
         id="shelter-modal"
-        title="Заявка"
-        @ok="submit()"
-        ok-only
-        ok-title='Отправить'
+        size='lg'
+        hide-footer
+        hide-header
     >
-        <b-form>
-            <b-form-group
-                label='Животное:'
-            >
-                <b-form-input
-                    v-model="animal.name"
-                    type='text'
-                    disabled
-                />
-            </b-form-group>
-            <b-form-group
-                label='Фамилия:'
-            >
-                <b-form-input
-                    v-model="item.lastname"
-                    type='text'
-                    placeholder="Введите фамилию"
-                />
-            </b-form-group>
-            <b-form-group
-                label='Имя:'
-            >
-                <b-form-input
-                    v-model="item.firstname"
-                    type='text'
-                    placeholder="Введите имя"
-                />
-            </b-form-group>
-            <b-form-group
-                label='Отчество:'
-            >
-                <b-form-input
-                    v-model="item.middlename"
-                    type='text'
-                    placeholder="Введите отчество"
-                />
-            </b-form-group>
-            <b-form-group
-                label='Телефон:'
-            >
-                <b-form-input
-                    v-model="item.phone_num"
-                    type='tel'
-                    placeholder="Введите номер телефона"
-                />
-            </b-form-group>
-            <b-form-group
-                label='E-mail:'
-            >
-                <b-form-input
-                    v-model="item.email"
-                    type='email'
-                    placeholder="Введите номер телефона"
-                />
-            </b-form-group>
-            <b-form-group
-                label='Эл. почта:'
-            >
-                <b-form-input
-                    v-model="item.email"
-                    placeholder="Введите электронный адрес"
-                />
-            </b-form-group>
-            <b-form-group
-                label='Комментарий:'
-            >
-                <b-form-textarea
-                    v-model="item.comment"
-                    placeholder="Оставьте комментарий"
-                    rows='3'
-                />
-            </b-form-group>
-        </b-form>
+        <b-container fluid class="request">
+            <b-row class="header">
+                <b-col :style="{'text-align': 'center'}">
+                    <span>приютить питомца?!</span>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols='4' class="right">Имя</b-col>
+                <b-col cols='8' class="left">
+                    <b-form-input
+                        v-model="item.firstname"
+                        type='text'
+                        placeholder="Введите имя"
+                    />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols='4' class="right">Фамилия</b-col>
+                <b-col cols='8' class="left">
+                    <b-form-input
+                        v-model="item.lastname"
+                        type='text'
+                        placeholder="Введите фамилию"
+                    />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols='4' class="right">Отчество</b-col>
+                <b-col cols='8' class="left">
+                    <b-form-input
+                        v-model="item.middlename"
+                        type='text'
+                        placeholder="Введите отчество"
+                    />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols='4' class="right">Телефон</b-col>
+                <b-col cols='8' class="left">
+                    <b-form-input
+                        v-model="item.phone_num"
+                        type='tel'
+                        placeholder="Введите номер телефона"
+                    />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col cols='4' class="right">E-mail</b-col>
+                <b-col cols='8' class="left">
+                    <b-form-input
+                        v-model="item.email"
+                        placeholder="Введите электронный адрес"
+                    />
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col >Комментарий</b-col>
+            </b-row>
+            <b-row>
+                <b-col >
+                    <b-form-textarea
+                        v-model="item.comment"
+                        placeholder="Оставьте комментарий"
+                        rows='6'
+                    />
+                </b-col>
+            </b-row>
+            <b-row class="actions">
+                <b-col class="left">
+                    <b-button
+                        class="btn cancel"
+                        @click="$bvModal.hide('shelter-modal')"
+                    >Нет</b-button>
+                </b-col>
+                <b-col class="right">
+                    <b-button
+                        class="btn success"
+                        @click="submit()"
+                    >Да!</b-button>
+                </b-col>
+            </b-row>
+        </b-container>
     </b-modal>
 </template>
 
@@ -102,8 +110,9 @@ export default {
     watch: {
         value: {
             handler(val) {
-                this.$set(this, 'item', {pet: this.value.id});
-                this.$set(this, 'animal', this.value);
+                console.log(val);
+                this.$set(this, 'item', {pet: val ? val.id : val});
+                this.$set(this, 'animal', val);
             },
             deep: true,
         }

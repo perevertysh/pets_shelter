@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-container fluid variant="info" v-if="items && items.length">
-            <b-row v-for="indexRow in countRows" :key="indexRow" class="my-4">
+            <b-row v-for="indexRow in countRows" :key="indexRow">
                 <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
                     <pet-card
                         v-if="items[calcIndex(indexCol, indexRow)]"

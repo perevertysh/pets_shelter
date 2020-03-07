@@ -1,0 +1,57 @@
+.request {
+    background-color: #9BD288;
+    color: rgba($color: #223F2C, $alpha: 0.89);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .header {
+        font-size: 36px !important;
+        padding-bottom: 80px !important;
+        padding-top: 15px;
+    }
+    .success {
+        background-color: #98FFBB;
+    }
+    .cancel {
+        background-color: #F0F299;
+    }
+    .row {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+        .right {
+            text-align: right;
+            padding-right: 10px;
+        }
+        .left {
+            text-align: left;
+            padding-left: 10px;
+            .form-control {
+                max-width: 350px;
+            }
+        }
+    }
+    .actions {
+        padding: 15px 30px;
+        .btn {
+            color: rgba($color: #223F2C, $alpha: 0.89);
+            border-radius: 20px;
+            border-color: rgba($color: #223F2C, $alpha: 0.89);
+            width: 100px;
+            &.cancel {
+                background-color: #F0F299;
+            }
+            &.success {
+                background-color: #98FFBB;
+            }
+        }
+    }
+}
+
+.modal-body {
+    padding: 0;
+}

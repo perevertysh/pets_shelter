@@ -13506,27 +13506,34 @@ input[type=color].form-control:disabled {
 }
 
 .tail {
-  cursor: pointer;
   background-color: #D9CDB0;
   box-shadow: 0px 4px 10px rgba(34, 63, 44, 0.89);
   border-radius: 10px;
+  margin: 15px auto;
+  width: 390px;
 }
 
 .tail .row {
   padding: 10px;
 }
 
+.tail .row #image {
+  cursor: pointer;
+}
+
 .tail .row #image img {
-  max-width: 200px;
-  max-height: 150px;
+  width: 200px;
+  height: 150px;
 }
 
 .tail .row #info {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 .tail .row #info .btn {
+  margin-top: auto;
   align-self: flex-end;
 }
 
@@ -13545,6 +13552,75 @@ input[type=color].form-control:disabled {
 
 .tail .row .btn.lucky {
   background-color: #80B889;
+}
+
+.request {
+  background-color: #9BD288;
+  color: rgba(34, 63, 44, 0.89);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.request .header {
+  font-size: 36px !important;
+  padding-bottom: 80px !important;
+  padding-top: 15px;
+}
+
+.request .success {
+  background-color: #98FFBB;
+}
+
+.request .cancel {
+  background-color: #F0F299;
+}
+
+.request .row {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.request .row .right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.request .row .left {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.request .row .left .form-control {
+  max-width: 350px;
+}
+
+.request .actions {
+  padding: 15px 30px;
+}
+
+.request .actions .btn {
+  color: rgba(34, 63, 44, 0.89);
+  border-radius: 20px;
+  border-color: rgba(34, 63, 44, 0.89);
+  width: 100px;
+}
+
+.request .actions .btn.cancel {
+  background-color: #F0F299;
+}
+
+.request .actions .btn.success {
+  background-color: #98FFBB;
+}
+
+.modal-body {
+  padding: 0;
 }
 
 @font-face {

@@ -82,7 +82,7 @@ class Pet(models.Model):
                                verbose_name="Статус питомца", blank=True,
                                null=True)
     gender = models.ForeignKey('pets.Gender', on_delete=models.CASCADE,
-                               verbose_name="Порода")
+                               verbose_name="Пол")
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

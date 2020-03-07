@@ -42,7 +42,7 @@ class PetViewSet(viewsets.ModelViewSet):
     filter_backends = [filters.OrderingFilter, filters.SearchFilter,
                        df_filters.DjangoFilterBackend]
     search_fields = (
-        'name', 'age', 'species__name', 'breed__name', 'status__name',)
+        'name', 'age', 'species__name', 'gender__name',)
     filterset_fields = (
         'name', 'age', 'species__name', 'breed__code', 'status__code',)
 

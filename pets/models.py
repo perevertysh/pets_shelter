@@ -9,7 +9,7 @@ from django.urls import reverse
 class Gender(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     name = models.CharField(max_length=256,
-                            verbose_name="Порода")
+                            verbose_name="Пол")
     code = models.CharField(max_length=256,
                             verbose_name="Код")
 

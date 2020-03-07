@@ -44,7 +44,8 @@ class PetViewSet(viewsets.ModelViewSet):
     search_fields = (
         'name', 'age', 'species__name', 'gender__name',)
     filterset_fields = (
-        'name', 'age', 'species__name', 'breed__code', 'status__code',)
+        'name', 'age', 'species__name', 'breed__code', 'gender__code',
+        'status__code',)
 
 
 class SheltingPetsViewSet(viewsets.ModelViewSet):

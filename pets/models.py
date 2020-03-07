@@ -9,7 +9,7 @@ from django.urls import reverse
 class Gender(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     name = models.CharField(max_length=256,
-                            verbose_name="Порода")
+                            verbose_name="Пол")
     code = models.CharField(max_length=256,
                             verbose_name="Код")
 
@@ -84,7 +84,7 @@ class Pet(models.Model):
                                verbose_name="Статус питомца", blank=True,
                                null=True)
     gender = models.ForeignKey('pets.Gender', on_delete=models.CASCADE,
-                               verbose_name="Порода")
+                               verbose_name="Пол")
 
     def save(self, force_insert=False, force_update=False, using=None,
              update_fields=None):

@@ -47,7 +47,7 @@
                     <b-form-input
                         v-model="item.phone_num"
                         type='tel'
-                        placeholder="Введите номер телефона"
+                        placeholder="+7 ваш номер"
                     />
                 </b-col>
             </b-row>
@@ -56,7 +56,7 @@
                 <b-col cols='8' class="left">
                     <b-form-input
                         v-model="item.email"
-                        placeholder="Введите электронный адрес"
+                        placeholder="your@email.com"
                     />
                 </b-col>
             </b-row>

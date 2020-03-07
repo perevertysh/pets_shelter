@@ -8,7 +8,7 @@ from rest_framework import pagination
 from rest_framework import filters
 
 from .models import (Pet, Breed, PetStatus, Species)
-from .serializers import (PetSerializer, SheltingPetsSerializer,
+from .serializers import (PetSerializer, ShelteringPetsSerializer,
                           BreedSerializer, PetStatusSerializer,
                           SpeciesSerializer)
 
@@ -38,17 +38,18 @@ class SpeciesViewSet(viewsets.ModelViewSet):
 class PetViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
     serializer_class = PetSerializer
-    queryset = Pet.objects.all()
+    queryset = Pet.objects.all().order_by("doc__date")
     filter_backends = [filters.OrderingFilter, filters.SearchFilter,
                        df_filters.DjangoFilterBackend]
     search_fields = (
-        'name', 'age', 'species__name', 'breed__name', 'status__name',)
+        'name', 'age', 'species__name', 'gender__name',)
     filterset_fields = (
-        'name', 'age', 'species__name', 'breed__code', 'status__code',)
+        'name', 'age', 'species__name', 'breed__code', 'gender__code',
+        'status__code',)
 
 
 class SheltingPetsViewSet(viewsets.ModelViewSet):
     pagination_class = pagination.PageNumberPagination
-    serializer_class = SheltingPetsSerializer
+    serializer_class = ShelteringPetsSerializer
     queryset = Pet.objects.filter(status__code="shelted")
     # filter_backends = [django_filters.rest_framework.DjangoFilterBackend]

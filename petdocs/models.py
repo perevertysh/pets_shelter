@@ -42,9 +42,9 @@ class PetShelteringRequest(models.Model):
     phone_num = models.CharField(max_length=12,
                                  verbose_name=_("Номер телефона"))
     email = models.EmailField(verbose_name=_("Адрес эл.почты"))
-    firstname = models.CharField(max_length=256, verbose_name=_("Имя"))
-    middlename = models.CharField(max_length=256, verbose_name=_("Отчество"))
-    lastname = models.CharField(max_length=256, verbose_name=_("Фамилия"))
+    firstname = models.CharField(max_length=20, verbose_name=_("Имя"))
+    middlename = models.CharField(max_length=20, verbose_name=_("Отчество"))
+    lastname = models.CharField(max_length=20, verbose_name=_("Фамилия"))
     comment = models.TextField(max_length=500, verbose_name=_("Комментарии"))
 
     pet = models.ForeignKey("pets.Pet", on_delete=models.CASCADE,

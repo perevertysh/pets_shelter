@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('petdocs', '0002_petshelteringrequest_pet'),
+        ('petdocs', '0001_initial'),
     ]
 
     operations = [
@@ -17,3 +17,4 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
     ]
+

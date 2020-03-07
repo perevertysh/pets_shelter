@@ -12,6 +12,7 @@
             >
                 <b-form-input
                     v-model="animal.name"
+                    type='text'
                     disabled
                 />
             </b-form-group>
@@ -20,6 +21,7 @@
             >
                 <b-form-input
                     v-model="item.lastname"
+                    type='text'
                     placeholder="Введите фамилию"
                 />
             </b-form-group>
@@ -28,6 +30,7 @@
             >
                 <b-form-input
                     v-model="item.firstname"
+                    type='text'
                     placeholder="Введите имя"
                 />
             </b-form-group>
@@ -36,6 +39,7 @@
             >
                 <b-form-input
                     v-model="item.middlename"
+                    type='text'
                     placeholder="Введите отчество"
                 />
             </b-form-group>
@@ -44,7 +48,25 @@
             >
                 <b-form-input
                     v-model="item.phone_num"
+                    type='tel'
                     placeholder="Введите номер телефона"
+                />
+            </b-form-group>
+            <b-form-group
+                label='E-mail:'
+            >
+                <b-form-input
+                    v-model="item.email"
+                    type='email'
+                    placeholder="Введите номер телефона"
+                />
+            </b-form-group>
+            <b-form-group
+                label='Эл. почта:'
+            >
+                <b-form-input
+                    v-model="item.email"
+                    placeholder="Введите электронный адрес"
                 />
             </b-form-group>
             <b-form-group
@@ -61,7 +83,7 @@
 </template>
 
 <script>
-import rest from './../js/rest';
+import rest from './../js/rest'
 
 export default {
     name: 'ShelterPet',
@@ -77,12 +99,6 @@ export default {
             animal: {},
         };
     },
-    mounted: function() {
-        if (this.value) {
-            this.$set(this, 'item', {pet: this.value.id});
-            this.$set(this, 'animal', this.value);
-        }
-    },
     watch: {
         value: {
             handler(val) {
@@ -90,6 +106,12 @@ export default {
                 this.$set(this, 'animal', this.value);
             },
             deep: true,
+        }
+    },
+    mounted: function() {
+        if (this.value) {
+            this.$set(this, 'item', {pet: this.value.id});
+            this.$set(this, 'animal', this.value);
         }
     },
     methods: {

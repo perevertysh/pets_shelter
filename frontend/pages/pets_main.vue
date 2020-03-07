@@ -1,46 +1,57 @@
 <template>
     <div>
-        <b-container variant="info" v-if="items && items.length">
+        <b-container fluid variant="info" v-if="items && items.length">
             <b-row v-for="indexRow in countRows" :key="indexRow" class="my-4">
                 <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
-                    <pet-card :item="items[calcIndex(indexCol, indexRow)]"/>
+                    <pet-card
+                        v-if="items[calcIndex(indexCol, indexRow)]"
+                        :item="items[calcIndex(indexCol, indexRow)]"
+                        v-model='selectItem'
+                    />
                 </b-col>
+                <div class="w-100"></div>
             </b-row>
         </b-container>
         <div v-else>
             Приют пуст
         </div>
         <b-pagination
-            align="right"
+            align="center"
             class="mx-2 mt-2"
             v-model="curPage"
             :total-rows="totalRows"
             :per-page="perPage"
+            first-number
+            last-number
         ></b-pagination>
+        <shelter-pet v-model="selectItem"/>
     </div>
 </template>
 
 <script>
 import rest from './../js/rest'
 import PetCard from './pet_card'
+import ShelterPet from './shelter_pet'
 
 export default {
     name: 'Pets',
     components: {
         PetCard,
+        ShelterPet,
     },
     props:{
         model: {
             type: String,
-            default: 'petslist',
+            default: 'pet',
         }
     },
     data: function() {
         return {
             items: null,
-            countCol: 5,
+            selectItem: null,
+            countCol: 3,
             curPage: 1,
-            perPage: 10,
+            perPage: 6,
             totalRows: 0,
         };
     },
@@ -59,7 +70,7 @@ export default {
     },
     methods: {
         fetch() {
-            rest[this.model].get({page: this.curPage, }).then(res => {
+            rest[this.model].get({page: this.curPage, page_size: this.perPage}).then(res => {
                 if (res.data.results.length) {
                     this.items = res.data.results;
                     // this.items = this.items.concat(this.items.concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items).concat(this.items));

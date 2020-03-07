@@ -1,13 +1,31 @@
 {% extends "index.html" %}
 {% block content %}
-<div>
-    <b-navbar type="dark" variant="success">
-        <b-navbar-brand href='/app/pets'>Питомцы</b-navbar-brand>
-        <b-navbar-brand href='/app/about'>О нас</b-navbar-brand>
-        <b-navbar-brand href='/app/contact'>Контакты</b-navbar-brand>
-    </b-navbar>
-    <main class="main-content mt-2 mx-2">
-        <router-view/>
-    </main>
+<b-navbar>
+    <!-- <b-navbar-brand href='/app/pets'>Питомцы</b-navbar-brand>
+    <b-navbar-brand href='/app/about'>О нас</b-navbar-brand>
+    <b-navbar-brand href='/app/contact'>Контакты</b-navbar-brand> -->
+    <b-navbar-nav>
+        <b-nav-form>
+            <b-button class="mx-2 header-btn" href='/app/about'>О нас</b-button>
+            <b-button class="mx-2 header-btn" href='/app/pets'>Питомцы</b-button>
+            <b-button class="mx-2 header-btn" href='/app/contact'>Контакты</b-button>
+        </b-nav-form>
+    </b-navbar-nav>
+
+    <b-navbar-nav class="ml-auto mr-auto">
+        <b-nav-text class="header-title">дом питомца</b-nav-text>
+    </b-navbar-nav>
+
+    <b-navbar-nav class="ml-auto">
+        <b-nav-form>
+            <b-form-input size="sm" class="mr-sm-2" type='search' placeholder="Найти питомца..."></b-form-input>
+        </b-nav-form>   
+    </b-navbar-nav>
+</b-navbar>
+<main class="main-content mt-2 mx-2">
+    <router-view/>
+</main>
+<div class="footer">
+    <p class="footer-content">© дом питомца</p>
 </div>
 {% endblock %}

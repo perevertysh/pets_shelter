@@ -32,7 +32,7 @@ class Owner(models.Model):
     note = models.CharField(max_length=256, verbose_name=_("Описание"))
 
     def __str__(self):
-        return "{} {}".format(self.lastname, self.firstname)
+        return f"{self.firstname} {self.lastname}"
 
 
 class PetShelteringRequest(models.Model):
@@ -41,6 +41,7 @@ class PetShelteringRequest(models.Model):
 
     phone_num = models.CharField(max_length=12,
                                  verbose_name=_("Номер телефона"))
+    email = models.EmailField(verbose_name=_("Адрес эл.почты"))
     firstname = models.CharField(max_length=256, verbose_name=_("Имя"))
     middlename = models.CharField(max_length=256, verbose_name=_("Отчество"))
     lastname = models.CharField(max_length=256, verbose_name=_("Фамилия"))
@@ -50,3 +51,6 @@ class PetShelteringRequest(models.Model):
                             verbose_name=_("Питомец"),
                             null=True, blank=True,
                             related_name="pet_sheltering_request_pet")
+
+    def __str__(self):
+        return f"{self.firstname} {self.lastname}, {self.pet}"

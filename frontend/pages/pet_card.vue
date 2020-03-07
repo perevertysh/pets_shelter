@@ -1,24 +1,38 @@
 <template>
-    <div v-if="item" @click="select()" :style="{cursor: 'pointer'}">
-        <b-icon v-if="!item.status" icon='circle' variant="primary" font-scale="2" :style='{position: "absolute"}'/>
-        <b-icon v-else icon='check-circle' variant="success" font-scale="2" :style='{position: "absolute"}'/>
-        <b-img :src='item.photo' fluid rounded/>
-        <div 
-            :title="item.name"
-            :style="{
-                'white-space': 'nowrap', 
-                width: size + 'px', 
-                display: 'inline-block'
-            }"
-        >
-            {{item.name}}
-        </div>
-    </div>
+    <b-container class="tail" v-if="item" @click="select()">
+        <b-row>
+            <b-col key='image' id='image' sm="7">
+                <b-img :src='item.photo' fluid rounded/>
+            </b-col>
+            <b-col key='info' id='info' sm="5">
+                <div>
+                    {{item.name}}<br/>
+                    {{item.gender.name}}<br/>
+                    {{item.age + " " + make_word_end()}}
+                </div>
+                <b-button 
+                    class="btn"
+                    :class="{
+                        wait: !item.status,
+                        lucky: item.status,
+                    }"
+                    @click="!item.status && shelterReq()"
+                >
+                    {{item.status ? 'ждет хозяина' : 'без дома'}}
+                </b-button>
+            </b-col>
+        </b-row>
+    </b-container>
 </template>
 
 <script>
+import functions from './js/functions'
+
 export default {
     name: 'PetCard',
+    mixins: [
+        functions,
+    ],
     props: {
         item: {
             default: null,
@@ -27,22 +41,15 @@ export default {
             type: Object,
             default: null,
         },
-        readOnly: {
-            type: Boolean,
-            default: false,
-        },
-        size: {
-            type: Number,
-            default: 180,
-        },
     },
     methods: {
         select() {
-            // this.$bvModal.show('profile-modal');
-            // this.$emit('input', this.item);
-            if (!this.readOnly)
-                this.$router.push({name: 'pet.edit',  params: { id: this.item.id }});
+            this.$router.push({name: 'pet.edit',  params: { id: this.item.id }});
         },
+        shelterReq() {
+            this.$emit('input', this.item);
+            this.shelter();
+        }
     }
 }
 </script>

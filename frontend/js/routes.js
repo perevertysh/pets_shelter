@@ -5,8 +5,22 @@ Vue.use(VueRouter);
 
 let routes = [];
 
+import About from './../pages/about'
+import Contact from './../pages/contact'
 import Pets from './../pages/pets_main'
 import PetProfile from './../pages/pet_profile_page'
+
+routes.push({
+  path: "/about",
+  component: About,
+  name: 'about'
+});
+
+routes.push({
+  path: "/contact",
+  component: Contact,
+  name: 'contact'
+});
 
 routes.push({
   path: "/pets",

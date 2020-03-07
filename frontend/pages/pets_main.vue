@@ -9,7 +9,6 @@
                         v-model='selectItem'
                     />
                 </b-col>
-                <div class="w-100"></div>
             </b-row>
         </b-container>
         <div v-else>

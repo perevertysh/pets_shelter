@@ -4,14 +4,12 @@ import Vuex from 'vuex'
 import store from './store'
 import {router} from './routes'
 // plugins
-import { BootstrapVue, IconsPlugin, NavbarPlugin, ModalPlugin } from 'bootstrap-vue'
+import { BootstrapVue, NavbarPlugin, ModalPlugin } from 'bootstrap-vue'
 // components
 import { BPagination } from 'bootstrap-vue'
 
-
 Vue.use(Vuex);
 Vue.use(BootstrapVue);
-Vue.use(IconsPlugin);
 Vue.use(NavbarPlugin);
 Vue.use(ModalPlugin);
 

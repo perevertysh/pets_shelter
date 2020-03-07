@@ -7,10 +7,10 @@ from rest_framework import viewsets
 from rest_framework import pagination
 from rest_framework import filters
 
-from .models import (Pet, Breed, PetStatus, Species)
+from .models import (Pet, Breed, PetStatus, Species, Gender)
 from .serializers import (PetSerializer, ShelteringPetsSerializer,
                           BreedSerializer, PetStatusSerializer,
-                          SpeciesSerializer)
+                          SpeciesSerializer, GenderSerializer)
 
 
 def home(request):
@@ -33,6 +33,11 @@ class PetStatusViewSet(viewsets.ModelViewSet):
 class SpeciesViewSet(viewsets.ModelViewSet):
     serializer_class = SpeciesSerializer
     queryset = Species.objects.all()
+
+
+class GenderViewSet(viewsets.ModelViewSet):
+    serializer_class = GenderSerializer
+    queryset = Gender.objects.all()
 
 
 class PetViewSet(viewsets.ModelViewSet):

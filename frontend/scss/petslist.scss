@@ -13,3 +13,29 @@
         }
     }
 }
+
+.main {
+    .btn {
+        color: rgba($color: #223F2C, $alpha: 0.89);
+        border-radius: 20px;
+        border-color: rgba($color: #223F2C, $alpha: 0.89);
+        background-color: #98FFBB;
+        margin-left: auto;
+        &.select {
+            background-color: #F0F299;
+        }
+    }
+    .empty {
+        text-align: center;
+        font-size: 24px;
+        color: rgba($color: #223F2C, $alpha: 0.89);
+    }
+    .filter-1 {
+        background-color: #B9D1B9;
+        border: 1px solid rgba(34, 63, 44, 0.89);
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}

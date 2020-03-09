@@ -1,6 +1,6 @@
 <template>
     <div class='main'>
-        <b-container fluid :style='{margin: 0}'>
+        <b-container class="mb-4" fluid>
             <b-row align-h="start" cols="1" cols-sm="4" cols-md="4" cols-lg="6">
                 <b-col class="filter_col" cols='1'>
                     <b-button

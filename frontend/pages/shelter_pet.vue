@@ -121,7 +121,6 @@ export default {
             if (JSON.stringify(this.error) === JSON.stringify({})) {
                 return null;
             }
-            console.log(this.error[field] ? false : true);
             return this.error[field] ? false : true;
         },
     }

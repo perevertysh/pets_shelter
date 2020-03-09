@@ -45,7 +45,8 @@
         box-sizing: border-box;
         border-radius: 20px;
         padding: 10px;
-        margin-top: 10px;
-        // min-width: 365px
+        #inline-form-input-sort {
+            width: 100%;
+        }
     }
 }

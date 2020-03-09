@@ -36,7 +36,7 @@
                                 >{{filter[key].name}}</label>
                                 <b-form-select
                                     :id="'inline-form-input-' + key"
-                                    class="mb-2 mr-sm-2 mb-sm-0"
+                                    class="my-2 mr-sm-2 mb-sm-0"
                                     v-model='select[key]'
                                     :value-field='filter[key].value_field'
                                     text-field='name'
@@ -52,7 +52,7 @@
                                 >Возвраст</label>
                                 <b-form-input
                                     id="inline-form-input-age"
-                                    class="mb-2 mr-sm-2 mb-sm-0"
+                                    class="my-2 mr-sm-2 mb-sm-0"
                                     v-model='select.age'
                                     type='number'
                                     :style="{
@@ -60,7 +60,7 @@
                                     }"
                                 ></b-form-input>
                             </b-form>
-                            <b-button type="reset" @click="onReset()">Сбросить</b-button>
+                            <b-button class="my-2 mr-sm-2 mb-sm-0" type="reset" @click="onReset()">Сбросить</b-button>
                         </b-form>
                     </div>
                 </b-col>
@@ -75,7 +75,7 @@
                             >Сортировать по</label>
                             <b-form-select
                                 id="inline-form-input-sort"
-                                class="mb-2 mr-sm-4 mb-sm-0"
+                                class="mb-2 px-sm-4 mb-sm-0"
                                 v-model='sortBy'
                                 :options='optionsSort'
                             ></b-form-select>
@@ -94,17 +94,6 @@
                     />
                 </b-col>
             </b-row>
-
-
-            <!-- <b-row v-for="indexRow in countRows" :key="indexRow">
-                <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
-                    <pet-card
-                        v-if="items[calcIndex(indexCol, indexRow)]"
-                        :item="items[calcIndex(indexCol, indexRow)]"
-                        v-model='selectItem'
-                    />
-                </b-col>
-            </b-row> -->
         </b-container>
         <div v-else class="empty" :style="{'margin-top': '15px'}">
             Приют пуст
@@ -206,11 +195,6 @@ export default {
             totalRows: 0,
         };
     },
-    computed: {
-        countRows() {
-            return Math.ceil(this.items.length / this.countCol);
-        },
-    },
     watch: {
         curPage () {
             this.fetch();    
@@ -275,9 +259,6 @@ export default {
                 return;
             }
             this.select.status__code = status;
-        },
-        calcIndex (col, row) {
-            return col - 1 + (row - 1) * this.countCol;
         },
     }
 }

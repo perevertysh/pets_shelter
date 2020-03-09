@@ -28,9 +28,6 @@
         <main class="main-content mt-2 mx-2">
             <router-view :search_str='search_str'/>
         </main>
-        <div class="footer">
-            <p class="footer-content">© дом питомца</p>
-        </div>
     </div>    
 </template>
 

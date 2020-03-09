@@ -22,22 +22,22 @@ from django_filters import rest_framework as df_filters
 
 class BreedViewSet(viewsets.ModelViewSet):
     serializer_class = BreedSerializer
-    queryset = Breed.objects.all()
+    queryset = Breed.objects.all().order_by("name")
 
 
 class PetStatusViewSet(viewsets.ModelViewSet):
     serializer_class = PetStatusSerializer
-    queryset = PetStatus.objects.all()
+    queryset = PetStatus.objects.all().order_by("name")
 
 
 class SpeciesViewSet(viewsets.ModelViewSet):
     serializer_class = SpeciesSerializer
-    queryset = Species.objects.all()
+    queryset = Species.objects.all().order_by("name")
 
 
 class GenderViewSet(viewsets.ModelViewSet):
     serializer_class = GenderSerializer
-    queryset = Gender.objects.all()
+    queryset = Gender.objects.all().order_by("name")
 
 
 class PetViewSet(viewsets.ModelViewSet):
@@ -58,3 +58,4 @@ class SheltingPetsViewSet(viewsets.ModelViewSet):
     serializer_class = ShelteringPetsSerializer
     queryset = Pet.objects.filter(status__code="shelted")
     # filter_backends = [django_filters.rest_framework.DjangoFilterBackend]
+    ordering = ("name",)

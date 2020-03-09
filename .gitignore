@@ -4,6 +4,7 @@
 /bin/.env
 /frontend/node_modules/
 /pettyenv/
+/static/icons/
 /static/css/app.css
 /static/js/app.js
-static/js/app.js.LICENSE.txt
+/static/js/app.js.LICENSE.txt

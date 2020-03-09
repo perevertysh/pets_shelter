@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :style='{display: "contents"}'>
         <b-navbar>
             <b-navbar-nav>
                 <b-nav-form>
@@ -17,9 +17,9 @@
                 <b-nav-form>
                     <b-form-input
                         v-model='search_str'
-                        size="sm" 
-                        class="mr-sm-2" 
-                        type='search' 
+                        size="sm"
+                        class="mr-sm-2"
+                        type='search'
                         placeholder="Найти питомца..."
                     />
                 </b-nav-form>
@@ -31,7 +31,7 @@
         <div class="footer">
             <p class="footer-content">© дом питомца</p>
         </div>
-    </div>    
+    </div>
 </template>
 
 <script>

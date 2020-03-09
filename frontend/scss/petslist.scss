@@ -30,6 +30,16 @@
                 background-color: #F0F299;
             }
         }
+        .filter-1 {
+            background-color: #B9D1B9;
+            border: 1px solid rgba(34, 63, 44, 0.89);
+            box-sizing: border-box;
+            border-radius: 20px;
+            padding: 10px;
+            #inline-form-input-sort {
+                max-width: 100%;
+            }
+        }
     }
     .pet_col {
         min-width: 410px;
@@ -38,15 +48,5 @@
         text-align: center;
         font-size: 24px;
         color: rgba($color: #223F2C, $alpha: 0.89);
-    }
-    .filter-1 {
-        background-color: #B9D1B9;
-        border: 1px solid rgba(34, 63, 44, 0.89);
-        box-sizing: border-box;
-        border-radius: 20px;
-        padding: 10px;
-        #inline-form-input-sort {
-            max-width: 100%;
-        }
     }
 }

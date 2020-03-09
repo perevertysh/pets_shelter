@@ -6,7 +6,7 @@
                     <b-button
                         class="btn"
                         :class="{
-                            select: select.status__code == 'out_home',
+                            select: selectFilter.status__code == 'out_home',
                         }"
                         title='Питомцы без дома'
                         @click="changeStatus('out_home')"
@@ -16,7 +16,7 @@
                     <b-button
                         class="btn"
                         :class="{
-                            select: select.status__code == 'at_home',
+                            select: selectFilter.status__code == 'at_home',
                         }"
                         title='Счастливчики'
                         @click="changeStatus('at_home')"
@@ -37,7 +37,7 @@
                                 <b-form-select
                                     :id="'inline-form-input-' + key"
                                     class="my-2 mr-sm-2 mb-sm-0"
-                                    v-model='select[key]'
+                                    v-model='selectFilter[key]'
                                     :value-field='filter[key].value_field'
                                     text-field='name'
                                     :options='filter[key].items'
@@ -53,7 +53,7 @@
                                 <b-form-input
                                     id="inline-form-input-age"
                                     class="my-2 mr-sm-2 mb-sm-0"
-                                    v-model='select.age'
+                                    v-model='selectFilter.age'
                                     type='number'
                                     :style="{
                                         width: '100px'
@@ -181,7 +181,7 @@ export default {
                     value_field: 'code'
                 },
             },
-            select: {
+            selectFilter: {
                 specie: null,
                 gender: null,
                 breed: null,
@@ -202,7 +202,7 @@ export default {
         sortBy (val, oldval) {
             this.fetch();
         },
-        select: {
+        selectFilter: {
             handler() {
                 this.fetch();
             },
@@ -225,10 +225,10 @@ export default {
             let query = {page: this.curPage, page_size: this.perPage, ordering: this.sortBy};
             for (let key in this.filter) {
                 let item = this.filter[key];
-                query[key + '__' + item.value_field] = this.select[key];
+                query[key + '__' + item.value_field] = this.selectFilter[key];
             }
-            query.age = this.select.age;
-            query.status__code = this.select.status__code;
+            query.age = this.selectFilter.age;
+            query.status__code = this.selectFilter.status__code;
             rest[this.model].get(query).then(res => {
                 if (res.data) {
                     this.items = res.data.results;
@@ -249,16 +249,16 @@ export default {
         },
         onReset() {
             for (let key in this.filter) {
-                this.select[key] = null;
+                this.selectFilter[key] = null;
             }
-            this.select.age = null;
+            this.selectFilter.age = null;
         },
         changeStatus(status) {
-            if (this.select.status__code == status) {
-                this.select.status__code = null;
+            if (this.selectFilter.status__code == status) {
+                this.selectFilter.status__code = null;
                 return;
             }
-            this.select.status__code = status;
+            this.selectFilter.status__code = status;
         },
     }
 }

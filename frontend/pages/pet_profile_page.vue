@@ -1,5 +1,5 @@
 <template>
-    <b-container class="profile">
+    <b-container class="profile" v-if="item">
         <b-row>
             <b-col key='image' sm="4">
                 <b-img :src='item.photo' fluid rounded/>
@@ -36,7 +36,7 @@ export default {
     },
     data: function() {
         return {
-            item: {},
+            item: null,
         };
     },
     mounted: function() {

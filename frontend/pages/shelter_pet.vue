@@ -11,53 +11,20 @@
                     <span>приютить питомца?!</span>
                 </b-col>
             </b-row>
-            <b-row>
-                <b-col cols='4' class="right">Имя</b-col>
+            <b-row v-for="field in fields" :key="field.key">
+                <b-col cols='4' class="right">field.name</b-col>
                 <b-col cols='8' class="left">
                     <b-form-input
-                        v-model="item.firstname"
+                        :id='"input-" + field.field'
+                        v-model="item[field.field]"
+                        :state="errorHas(field.field)"
+                        :aria-describedby='"input-" + field.field + "-feedback"'
                         type='text'
-                        placeholder="Введите имя"
+                        :placeholder="field.placeholder"
                     />
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col cols='4' class="right">Фамилия</b-col>
-                <b-col cols='8' class="left">
-                    <b-form-input
-                        v-model="item.lastname"
-                        type='text'
-                        placeholder="Введите фамилию"
-                    />
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col cols='4' class="right">Отчество</b-col>
-                <b-col cols='8' class="left">
-                    <b-form-input
-                        v-model="item.middlename"
-                        type='text'
-                        placeholder="Введите отчество"
-                    />
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col cols='4' class="right">Телефон</b-col>
-                <b-col cols='8' class="left">
-                    <b-form-input
-                        v-model="item.phone_num"
-                        type='tel'
-                        placeholder="+7 ваш номер"
-                    />
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col cols='4' class="right">E-mail</b-col>
-                <b-col cols='8' class="left">
-                    <b-form-input
-                        v-model="item.email"
-                        placeholder="your@email.com"
-                    />
+                    <b-form-invalid-feedback :id='"input-" + field.field + "-feedback"' v-if="error[field.field]">
+                        {{error[field.field][0]}}
+                    </b-form-invalid-feedback>
                 </b-col>
             </b-row>
             <b-row>
@@ -66,17 +33,23 @@
             <b-row>
                 <b-col >
                     <b-form-textarea
+                        id="input-comment"
                         v-model="item.comment"
+                        :state="errorHas('comment')"
+                        aria-describedby="input-comment-feedback"
                         placeholder="Оставьте комментарий"
                         rows='6'
                     />
+                    <b-form-invalid-feedback id="input-comment-feedback" v-if="error.comment">
+                        {{error.comment[0]}}
+                    </b-form-invalid-feedback>
                 </b-col>
             </b-row>
             <b-row class="actions">
                 <b-col class="left">
                     <b-button
                         class="btn cancel"
-                        @click="$bvModal.hide('shelter-modal')"
+                        @click="onReset()"
                     >Нет</b-button>
                 </b-col>
                 <b-col class="right">
@@ -105,6 +78,14 @@ export default {
         return {
             item: {},
             animal: {},
+            error: {},
+            fields: [
+                { field: 'firstname', key: 'fn', name: 'Имя', placeholder: 'Введите имя' },
+                { field: 'lastname', key: 'ln', name: 'Фамилия', placeholder: 'Введите фамилию' },
+                { field: 'middlename', key: 'mn', name: 'Отчество', placeholder: 'Введите отчество' },
+                { field: 'phone_num', key: 'pn', name: 'Телефон', placeholder: '+7 ваш номер' },
+                { field: 'email', key: 'em', name: 'E-mail', placeholder: 'your@email.com' },
+            ],
         };
     },
     watch: {
@@ -126,8 +107,22 @@ export default {
         submit() {
             rest.pet_shelter_req.post(this.item).then(res =>{
             }).catch(err => {
+                if (err.response.data) {
+                    this.$set(this, 'error', err.response.data);
+                }
                 console.error(err);
             });
+        },
+        onReset() {
+            this.error = {};
+            this.$bvModal.hide('shelter-modal');
+        },
+        errorHas(field) {
+            if (JSON.stringify(this.error) === JSON.stringify({})) {
+                return null;
+            }
+            console.log(this.error[field] ? false : true);
+            return this.error[field] ? false : true;
         },
     }
 }

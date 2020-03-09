@@ -126,6 +126,10 @@ export default {
         model: {
             type: String,
             default: 'pet',
+        },
+        search_str: {
+            type: String,
+            default: null,
         }
     },
     data: function() {
@@ -185,6 +189,7 @@ export default {
                 specie: null,
                 gender: null,
                 breed: null,
+                name: null,
                 age: null,
                 status__code: null,
             },
@@ -207,11 +212,18 @@ export default {
                 this.fetch();
             },
             deep: true,
+        },
+        search_str: {
+            handler(val) {
+                this.$set(this.selectFilter, 'name', val);
+            },
+            deep: true,
         }
     },
     mounted: function() {
         this.fetch();
         this.loadFilters();
+        console.log(this.search_str);
     },
     methods: {
         fetch() {
@@ -227,6 +239,7 @@ export default {
                 let item = this.filter[key];
                 query[key + '__' + item.value_field] = this.selectFilter[key];
             }
+            query.name = this.selectFilter.name;
             query.age = this.selectFilter.age;
             query.status__code = this.selectFilter.status__code;
             rest[this.model].get(query).then(res => {

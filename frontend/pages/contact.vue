@@ -1,0 +1,15 @@
+<template>
+    <div class="contact">
+        <span>
+            <H2>Контакты</H2>
+
+            <p>Вы можете связаться с нами по телефону или почте:
+            <ul>
+            <li>телефон: 8 - 945 - 456 - 98 - 45</li>
+
+            <li>e-mail: team@pettyhouse.ru</li>
+            </ul>
+                Звоните, пишите, будем рады!</p>
+        </span>
+    </div>
+</template>

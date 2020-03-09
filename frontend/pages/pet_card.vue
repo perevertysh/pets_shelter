@@ -1,8 +1,8 @@
 <template>
-    <b-container class="tail" v-if="item">
-        <b-row>
+    <b-container fluid class="tail" v-if="item">
+        <b-row align-h='around'>
             <b-col key='image' id='image' sm="7" @click="select()">
-                <b-img :src='item.photo' fluid rounded/>
+                <b-img-lazy :src='item.photo' fluid-grow rounded/>
             </b-col>
             <b-col key='info' id='info' sm="5">
                 <div>

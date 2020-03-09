@@ -15,15 +15,24 @@
 }
 
 .main {
-    .btn {
-        color: rgba($color: #223F2C, $alpha: 0.89);
-        border-radius: 20px;
-        border-color: rgba($color: #223F2C, $alpha: 0.89);
-        background-color: #98FFBB;
-        margin-left: auto;
-        &.select {
-            background-color: #F0F299;
+    .filter_col {
+        min-width: 250px;
+        margin-top: 15px;
+        .btn {
+            color: rgba($color: #223F2C, $alpha: 0.89);
+            border-radius: 20px;
+            border-color: rgba($color: #223F2C, $alpha: 0.89);
+            background-color: #98FFBB;
+            margin-left: auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &.select {
+                background-color: #F0F299;
+            }
         }
+    }
+    .pet_col {
+        min-width: 410px;
     }
     .empty {
         text-align: center;
@@ -37,5 +46,6 @@
         border-radius: 20px;
         padding: 10px;
         margin-top: 10px;
+        // min-width: 365px
     }
 }

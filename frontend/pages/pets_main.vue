@@ -1,28 +1,30 @@
 <template>
     <div class='main'>
         <b-container fluid :style='{margin: 0}'>
-            <b-row align-h="start">
-                <b-col cols='2'>
+            <b-row align-h="start" cols="1" cols-sm="4" cols-md="4" cols-lg="6">
+                <b-col class="filter_col" cols='1'>
                     <b-button
                         class="btn"
                         :class="{
                             select: select.status__code == 'out_home',
                         }"
+                        title='Питомцы без дома'
                         @click="changeStatus('out_home')"
                     >Питомцы без дома</b-button>
                 </b-col>
-                <b-col cols='2'>
+                <b-col class="filter_col" cols='1'>
                     <b-button
                         class="btn"
                         :class="{
                             select: select.status__code == 'at_home',
                         }"
+                        title='Счастливчики'
                         @click="changeStatus('at_home')"
                     >Счастливчики</b-button>
                 </b-col>
             </b-row>
-            <b-row>
-                <b-col sm='8'>
+            <b-row align-h="start">
+                <b-col class="filter_col" cols='8'>
                     <div class="filter-1">
                         <b-form inline  @reset="onReset">
                             <b-form inline v-for="(key, index) in filter_key" :key='index'>
@@ -62,7 +64,7 @@
                         </b-form>
                     </div>
                 </b-col>
-                <b-col sm='4'>
+                <b-col class="filter_col" cols='4'>
                     <div class="filter-1">
                         <b-form inline :style="{'justify-content': 'end'}">
                             <label
@@ -83,7 +85,18 @@
             </b-row>
         </b-container>
         <b-container fluid variant="info" v-if="items && items.length">
-            <b-row v-for="indexRow in countRows" :key="indexRow">
+            <b-row align-h="around" cols="1" cols-sm="2" cols-md="2" cols-lg="3">
+                <b-col class="pet_col" v-for="(item, index) in items" :key="index">
+                        <!-- v-if="item" -->
+                    <pet-card
+                        :item="item"
+                        v-model='selectItem'
+                    />
+                </b-col>
+            </b-row>
+
+
+            <!-- <b-row v-for="indexRow in countRows" :key="indexRow">
                 <b-col v-for="indexCol in countCol" :key="calcIndex(indexCol, indexRow)">
                     <pet-card
                         v-if="items[calcIndex(indexCol, indexRow)]"
@@ -91,9 +104,9 @@
                         v-model='selectItem'
                     />
                 </b-col>
-            </b-row>
+            </b-row> -->
         </b-container>
-        <div v-else class="empty">
+        <div v-else class="empty" :style="{'margin-top': '15px'}">
             Приют пуст
         </div>
         <b-pagination

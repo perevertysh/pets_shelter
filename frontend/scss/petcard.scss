@@ -3,12 +3,13 @@
     box-shadow: 0px 4px 10px rgba(34, 63, 44, 0.89);
     border-radius: 10px;
     margin: 15px auto;
-    width: 390px;
+    width: 390px;   
 
     .row {
-        padding: 10px;
+        padding: 0 10px;
 
         #image {
+            padding: 10px 5px;
             cursor: pointer;
             img {
                 width: 200px;
@@ -18,27 +19,24 @@
         #info {
             display: flex;
             flex-direction: column;
-            padding: 0;
+            padding: 10px 5px;
             .btn {
                 margin-top: auto;
                 align-self: flex-end;
+                max-height: 40px;
+                max-width: 115px;
+                font-size: 12px;
+                color: black;
+                border-color: transparent;
+                border-radius: 20px;
+    
+                &.wait {
+                    background-color: #DD8A5C;
+                }
+                &.lucky {
+                    background-color: #80B889;
+                }   
             }
-        }
-
-        .btn {
-            max-height: 40px;
-            max-width: 115px;
-            font-size: 12px;
-            color: black;
-            border-color: transparent;
-            border-radius: 20px;
-
-            &.wait {
-                background-color: #DD8A5C;
-            }
-            &.lucky {
-                background-color: #80B889;
-            }   
         }
     }
 }

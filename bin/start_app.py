@@ -16,9 +16,8 @@ if not os.path.islink("/etc/nginx/sites-enabled/pettyhome.conf"):
     os.system("sudo ln -s {}/nginx/pettyhome.conf /etc/nginx/sites-enabled/".format(path))
 os.system("sudo service nginx restart")
 os.system("cd {}/frontend; npm install; npm run production".format(path))
+os.system("python manage.py collectstatic --noinput")
 os.system("python manage.py migrate")
-if not os.path.isdir("{}/staticfiles".format(path)):
-    os.system("python manage.py collectstatic")
 os.system("exec gunicorn  -c '{}/bin/gunicorn-config.py' pettyhome.wsgi".format(path))
 
 

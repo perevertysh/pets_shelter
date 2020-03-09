@@ -1,1 +1,258 @@
-[{"model": "contenttypes.contenttype", "pk": 1, "fields": {"app_label": "admin", "model": "logentry"}}, {"model": "contenttypes.contenttype", "pk": 2, "fields": {"app_label": "auth", "model": "permission"}}, {"model": "contenttypes.contenttype", "pk": 3, "fields": {"app_label": "auth", "model": "group"}}, {"model": "contenttypes.contenttype", "pk": 4, "fields": {"app_label": "auth", "model": "user"}}, {"model": "contenttypes.contenttype", "pk": 5, "fields": {"app_label": "contenttypes", "model": "contenttype"}}, {"model": "contenttypes.contenttype", "pk": 6, "fields": {"app_label": "sessions", "model": "session"}}, {"model": "contenttypes.contenttype", "pk": 7, "fields": {"app_label": "petdocs", "model": "owner"}}, {"model": "contenttypes.contenttype", "pk": 8, "fields": {"app_label": "petdocs", "model": "registration"}}, {"model": "contenttypes.contenttype", "pk": 9, "fields": {"app_label": "pets", "model": "breed"}}, {"model": "contenttypes.contenttype", "pk": 10, "fields": {"app_label": "pets", "model": "pet"}}, {"model": "contenttypes.contenttype", "pk": 11, "fields": {"app_label": "pets", "model": "species"}}, {"model": "contenttypes.contenttype", "pk": 12, "fields": {"app_label": "petdocs", "model": "petshelteringrequest"}}, {"model": "contenttypes.contenttype", "pk": 13, "fields": {"app_label": "pets", "model": "petstatus"}}, {"model": "contenttypes.contenttype", "pk": 14, "fields": {"app_label": "pets", "model": "gender"}}, {"model": "sessions.session", "pk": "5pz8g0bi9tnd05q5odb4bg45poofvhld", "fields": {"session_data": "ZTJlYjNmNWRiMjM3MGU5YTU1YmYxZjJlMmI0NDg0MTQ2YWM1NjllYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MzQ1MGYxZmEwN2U5ZGZjNThkMTVjYTAwMjA3ZjI4YzMxOTVmMjIyIn0=", "expire_date": "2020-03-13T18:30:23.398Z"}}, {"model": "sessions.session", "pk": "rqp86mioy2wyte9gtl656kc0uhu185yt", "fields": {"session_data": "ZTJlYjNmNWRiMjM3MGU5YTU1YmYxZjJlMmI0NDg0MTQ2YWM1NjllYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4MzQ1MGYxZmEwN2U5ZGZjNThkMTVjYTAwMjA3ZjI4YzMxOTVmMjIyIn0=", "expire_date": "2020-03-09T08:39:07.530Z"}}, {"model": "petdocs.registration", "pk": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1", "fields": {"reg_num": "\u043f24022020", "date": "2020-02-24", "cage": "\u041065\u0444"}}, {"model": "petdocs.registration", "pk": "0f5f3ce6-de66-4161-9628-6e713166d456", "fields": {"reg_num": "\u043d01032020", "date": "2020-03-01", "cage": "\u042013"}}, {"model": "petdocs.registration", "pk": "149d7085-cdad-478a-9b75-3d74226a7152", "fields": {"reg_num": "\u044129022020", "date": "2020-02-29", "cage": "\u041a8"}}, {"model": "petdocs.registration", "pk": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f", "fields": {"reg_num": "\u044123022020", "date": "2020-02-23", "cage": "F456d"}}, {"model": "petdocs.registration", "pk": "97d9f821-77b2-4b6a-8bf5-3c49b9663361", "fields": {"reg_num": "\u043a29022020", "date": "2020-02-29", "cage": "\u04212"}}, {"model": "petdocs.registration", "pk": "af3e10fb-edb0-4df7-957b-0288016d6e94", "fields": {"reg_num": "\u044229022020", "date": "2020-02-29", "cage": "\u04113"}}, {"model": "pets.gender", "pk": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669", "fields": {"name": "\u043c\u0430\u043b\u044c\u0447\u0438\u043a", "code": "m"}}, {"model": "pets.gender", "pk": "cb4131c2-484b-4cde-a9b1-223c8b43d472", "fields": {"name": "\u0434\u0435\u0432\u043e\u0447\u043a\u0430", "code": "f"}}, {"model": "pets.breed", "pk": "23a6844a-42cc-48c4-953a-b13ba8be8292", "fields": {"name": "\u0442\u0430\u043a\u0441\u0430", "code": "dachshund"}}, {"model": "pets.breed", "pk": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e", "fields": {"name": "\u043a\u043e\u0440\u0435\u043b\u043b\u0430", "code": "cockatiel"}}, {"model": "pets.breed", "pk": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d", "fields": {"name": "\u043d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u043e\u0432\u0447\u0430\u0440\u043a\u0430", "code": "german_shepherd"}}, {"model": "pets.breed", "pk": "976df73f-aa7e-436d-8898-a24dc6f3c499", "fields": {"name": "\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0448\u043a\u0430", "code": "siberian_cat"}}, {"model": "pets.breed", "pk": "c8455311-4159-4324-b248-611555a3550e", "fields": {"name": "\u0441\u0442\u0430\u0444\u0444\u043e\u0440\u0434", "code": "stafford"}}, {"model": "pets.breed", "pk": "ce8e2940-9a60-4de7-85f7-7e49759fa080", "fields": {"name": "\u043f\u0438\u0442\u0431\u0443\u043b\u044c", "code": "pitbull"}}, {"model": "pets.species", "pk": "166941d7-672d-438a-8f7c-2648715f8872", "fields": {"name": "\u043a\u043e\u0448\u043a\u0430", "code": "cat"}}, {"model": "pets.species", "pk": "4628a324-09f3-4120-ba9f-862a9e17fcec", "fields": {"name": "\u043f\u043e\u043f\u0443\u0433\u0430\u0439", "code": "parrot"}}, {"model": "pets.species", "pk": "718fe547-0574-4c04-8795-7e594e088c4e", "fields": {"name": "\u0441\u043e\u0431\u0430\u043a\u0430", "code": "dog"}}, {"model": "pets.petstatus", "pk": "076ea473-532c-443e-b7ee-f60b060d6bb2", "fields": {"name": "\u0445\u043e\u0442\u044f\u0442 \u0437\u0430\u0431\u0440\u0430\u0442\u044c", "code": "wait_home"}}, {"model": "pets.petstatus", "pk": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46", "fields": {"name": "\u0431\u0435\u0437 \u0434\u043e\u043c\u0430", "code": "out_home"}}, {"model": "pets.petstatus", "pk": "fd9e6009-0294-43a1-81ab-e787ad65496d", "fields": {"name": "\u043f\u0440\u0438\u044e\u0442\u0438\u043b\u0438", "code": "at_home"}}, {"model": "pets.pet", "pk": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "fields": {"name": "\u0424\u0435\u043b\u0438\u043a\u0441", "age": 2, "doc": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1", "photo": "img/felix.jpeg", "species": "718fe547-0574-4c04-8795-7e594e088c4e", "breed": "ce8e2940-9a60-4de7-85f7-7e49759fa080", "owner": null, "status": "076ea473-532c-443e-b7ee-f60b060d6bb2", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "pets.pet", "pk": "517d137a-d05e-48bc-b1c0-cfeb09e06f23", "fields": {"name": "\u0411\u0430\u0440\u043e\u043d", "age": 2, "doc": "149d7085-cdad-478a-9b75-3d74226a7152", "photo": "img/baron.jpeg", "species": "166941d7-672d-438a-8f7c-2648715f8872", "breed": "976df73f-aa7e-436d-8898-a24dc6f3c499", "owner": null, "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "pets.pet", "pk": "70a41546-3381-4d13-be73-3096ef0cbe0b", "fields": {"name": "\u0413\u043e\u0448\u0430", "age": 1, "doc": "97d9f821-77b2-4b6a-8bf5-3c49b9663361", "photo": "img/gosha.jpeg", "species": "4628a324-09f3-4120-ba9f-862a9e17fcec", "breed": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e", "owner": null, "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "pets.pet", "pk": "a9297832-56e5-4949-9ac6-88b7973e1807", "fields": {"name": "\u041c\u0443\u0445\u0442\u0430\u0440", "age": 0, "doc": "0f5f3ce6-de66-4161-9628-6e713166d456", "photo": "img/grovcharka1.jpeg", "species": "718fe547-0574-4c04-8795-7e594e088c4e", "breed": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d", "owner": null, "status": "076ea473-532c-443e-b7ee-f60b060d6bb2", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "pets.pet", "pk": "aa4dc898-b9ed-4d0f-bd73-de6bc39285ac", "fields": {"name": "\u041b\u0438\u043d\u0434\u0430", "age": 2, "doc": "af3e10fb-edb0-4df7-957b-0288016d6e94", "photo": "img/taksa1.jpeg", "species": "718fe547-0574-4c04-8795-7e594e088c4e", "breed": "23a6844a-42cc-48c4-953a-b13ba8be8292", "owner": null, "status": "fd9e6009-0294-43a1-81ab-e787ad65496d", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "pets.pet", "pk": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "fields": {"name": "\u0414\u0436\u0438\u043d", "age": 4, "doc": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f", "photo": "img/pit1.jpeg", "species": "718fe547-0574-4c04-8795-7e594e088c4e", "breed": "c8455311-4159-4324-b248-611555a3550e", "owner": null, "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46", "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"}}, {"model": "auth.permission", "pk": 1, "fields": {"name": "Can add log entry", "content_type": 1, "codename": "add_logentry"}}, {"model": "auth.permission", "pk": 2, "fields": {"name": "Can change log entry", "content_type": 1, "codename": "change_logentry"}}, {"model": "auth.permission", "pk": 3, "fields": {"name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry"}}, {"model": "auth.permission", "pk": 4, "fields": {"name": "Can view log entry", "content_type": 1, "codename": "view_logentry"}}, {"model": "auth.permission", "pk": 5, "fields": {"name": "Can add permission", "content_type": 2, "codename": "add_permission"}}, {"model": "auth.permission", "pk": 6, "fields": {"name": "Can change permission", "content_type": 2, "codename": "change_permission"}}, {"model": "auth.permission", "pk": 7, "fields": {"name": "Can delete permission", "content_type": 2, "codename": "delete_permission"}}, {"model": "auth.permission", "pk": 8, "fields": {"name": "Can view permission", "content_type": 2, "codename": "view_permission"}}, {"model": "auth.permission", "pk": 9, "fields": {"name": "Can add group", "content_type": 3, "codename": "add_group"}}, {"model": "auth.permission", "pk": 10, "fields": {"name": "Can change group", "content_type": 3, "codename": "change_group"}}, {"model": "auth.permission", "pk": 11, "fields": {"name": "Can delete group", "content_type": 3, "codename": "delete_group"}}, {"model": "auth.permission", "pk": 12, "fields": {"name": "Can view group", "content_type": 3, "codename": "view_group"}}, {"model": "auth.permission", "pk": 13, "fields": {"name": "Can add user", "content_type": 4, "codename": "add_user"}}, {"model": "auth.permission", "pk": 14, "fields": {"name": "Can change user", "content_type": 4, "codename": "change_user"}}, {"model": "auth.permission", "pk": 15, "fields": {"name": "Can delete user", "content_type": 4, "codename": "delete_user"}}, {"model": "auth.permission", "pk": 16, "fields": {"name": "Can view user", "content_type": 4, "codename": "view_user"}}, {"model": "auth.permission", "pk": 17, "fields": {"name": "Can add content type", "content_type": 5, "codename": "add_contenttype"}}, {"model": "auth.permission", "pk": 18, "fields": {"name": "Can change content type", "content_type": 5, "codename": "change_contenttype"}}, {"model": "auth.permission", "pk": 19, "fields": {"name": "Can delete content type", "content_type": 5, "codename": "delete_contenttype"}}, {"model": "auth.permission", "pk": 20, "fields": {"name": "Can view content type", "content_type": 5, "codename": "view_contenttype"}}, {"model": "auth.permission", "pk": 21, "fields": {"name": "Can add session", "content_type": 6, "codename": "add_session"}}, {"model": "auth.permission", "pk": 22, "fields": {"name": "Can change session", "content_type": 6, "codename": "change_session"}}, {"model": "auth.permission", "pk": 23, "fields": {"name": "Can delete session", "content_type": 6, "codename": "delete_session"}}, {"model": "auth.permission", "pk": 24, "fields": {"name": "Can view session", "content_type": 6, "codename": "view_session"}}, {"model": "auth.permission", "pk": 25, "fields": {"name": "Can add owner", "content_type": 7, "codename": "add_owner"}}, {"model": "auth.permission", "pk": 26, "fields": {"name": "Can change owner", "content_type": 7, "codename": "change_owner"}}, {"model": "auth.permission", "pk": 27, "fields": {"name": "Can delete owner", "content_type": 7, "codename": "delete_owner"}}, {"model": "auth.permission", "pk": 28, "fields": {"name": "Can view owner", "content_type": 7, "codename": "view_owner"}}, {"model": "auth.permission", "pk": 29, "fields": {"name": "Can add registration", "content_type": 8, "codename": "add_registration"}}, {"model": "auth.permission", "pk": 30, "fields": {"name": "Can change registration", "content_type": 8, "codename": "change_registration"}}, {"model": "auth.permission", "pk": 31, "fields": {"name": "Can delete registration", "content_type": 8, "codename": "delete_registration"}}, {"model": "auth.permission", "pk": 32, "fields": {"name": "Can view registration", "content_type": 8, "codename": "view_registration"}}, {"model": "auth.permission", "pk": 33, "fields": {"name": "Can add breed", "content_type": 9, "codename": "add_breed"}}, {"model": "auth.permission", "pk": 34, "fields": {"name": "Can change breed", "content_type": 9, "codename": "change_breed"}}, {"model": "auth.permission", "pk": 35, "fields": {"name": "Can delete breed", "content_type": 9, "codename": "delete_breed"}}, {"model": "auth.permission", "pk": 36, "fields": {"name": "Can view breed", "content_type": 9, "codename": "view_breed"}}, {"model": "auth.permission", "pk": 37, "fields": {"name": "Can add pet", "content_type": 10, "codename": "add_pet"}}, {"model": "auth.permission", "pk": 38, "fields": {"name": "Can change pet", "content_type": 10, "codename": "change_pet"}}, {"model": "auth.permission", "pk": 39, "fields": {"name": "Can delete pet", "content_type": 10, "codename": "delete_pet"}}, {"model": "auth.permission", "pk": 40, "fields": {"name": "Can view pet", "content_type": 10, "codename": "view_pet"}}, {"model": "auth.permission", "pk": 41, "fields": {"name": "Can add species", "content_type": 11, "codename": "add_species"}}, {"model": "auth.permission", "pk": 42, "fields": {"name": "Can change species", "content_type": 11, "codename": "change_species"}}, {"model": "auth.permission", "pk": 43, "fields": {"name": "Can delete species", "content_type": 11, "codename": "delete_species"}}, {"model": "auth.permission", "pk": 44, "fields": {"name": "Can view species", "content_type": 11, "codename": "view_species"}}, {"model": "auth.permission", "pk": 45, "fields": {"name": "Can add pet sheltering request", "content_type": 12, "codename": "add_petshelteringrequest"}}, {"model": "auth.permission", "pk": 46, "fields": {"name": "Can change pet sheltering request", "content_type": 12, "codename": "change_petshelteringrequest"}}, {"model": "auth.permission", "pk": 47, "fields": {"name": "Can delete pet sheltering request", "content_type": 12, "codename": "delete_petshelteringrequest"}}, {"model": "auth.permission", "pk": 48, "fields": {"name": "Can view pet sheltering request", "content_type": 12, "codename": "view_petshelteringrequest"}}, {"model": "auth.permission", "pk": 49, "fields": {"name": "Can add pet status", "content_type": 13, "codename": "add_petstatus"}}, {"model": "auth.permission", "pk": 50, "fields": {"name": "Can change pet status", "content_type": 13, "codename": "change_petstatus"}}, {"model": "auth.permission", "pk": 51, "fields": {"name": "Can delete pet status", "content_type": 13, "codename": "delete_petstatus"}}, {"model": "auth.permission", "pk": 52, "fields": {"name": "Can view pet status", "content_type": 13, "codename": "view_petstatus"}}, {"model": "auth.permission", "pk": 53, "fields": {"name": "Can add gender", "content_type": 14, "codename": "add_gender"}}, {"model": "auth.permission", "pk": 54, "fields": {"name": "Can change gender", "content_type": 14, "codename": "change_gender"}}, {"model": "auth.permission", "pk": 55, "fields": {"name": "Can delete gender", "content_type": 14, "codename": "delete_gender"}}, {"model": "auth.permission", "pk": 56, "fields": {"name": "Can view gender", "content_type": 14, "codename": "view_gender"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$180000$rJ19RkX0Svvq$yyYnGEPqb4YSxrpdEuu4hE3+nkcf/Usd13lv3DHdV5c=", "last_login": "2020-02-28T18:30:23.397Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2020-02-23T09:49:57.578Z", "groups": [], "user_permissions": []}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2020-02-23T09:51:05.009Z", "user": 1, "content_type": 8, "object_id": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f", "object_repr": "23-02-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2020-02-23T09:51:25.862Z", "user": 1, "content_type": 9, "object_id": "c8455311-4159-4324-b248-611555a3550e", "object_repr": "\u0441\u0442\u0430\u0444\u043e\u0440\u0434", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2020-02-23T09:52:33.106Z", "user": 1, "content_type": 11, "object_id": "718fe547-0574-4c04-8795-7e594e088c4e", "object_repr": "\u0421\u043e\u0431\u0430\u043a\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2020-02-23T09:52:49.562Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2020-02-23T09:57:02.208Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2020-02-23T10:37:14.525Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2020-02-23T10:38:17.915Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2020-02-23T14:58:15.362Z", "user": 1, "content_type": 13, "object_id": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46", "object_repr": "\u0431\u0435\u0437 \u0434\u043e\u043c\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2020-02-23T14:58:33.346Z", "user": 1, "content_type": 13, "object_id": "076ea473-532c-443e-b7ee-f60b060d6bb2", "object_repr": "\u0445\u043e\u0442\u044f\u0442 \u0437\u0430\u0431\u0440\u0430\u0442\u044c", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2020-02-23T14:58:54.220Z", "user": 1, "content_type": 13, "object_id": "fd9e6009-0294-43a1-81ab-e787ad65496d", "object_repr": "\u043f\u0440\u0438\u044e\u0442\u0438\u043b\u0438", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2020-02-24T09:06:15.602Z", "user": 1, "content_type": 8, "object_id": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1", "object_repr": "24-02-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2020-02-24T09:32:40.568Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2020-02-24T10:33:32.050Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2020-02-24T10:34:03.927Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2020-02-24T11:50:27.292Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2020-02-24T11:50:31.956Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2020-02-24T13:10:30.154Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2020-02-24T13:11:15.056Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2020-02-28T18:30:39.685Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "jin (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2020-02-28T18:30:46.130Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "fsd (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2020-02-29T22:17:36.623Z", "user": 1, "content_type": 8, "object_id": "97d9f821-77b2-4b6a-8bf5-3c49b9663361", "object_repr": "29-02-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2020-02-29T22:19:15.997Z", "user": 1, "content_type": 11, "object_id": "4628a324-09f3-4120-ba9f-862a9e17fcec", "object_repr": "\u043f\u043e\u043f\u0443\u0433\u0430\u0439", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2020-02-29T22:26:32.259Z", "user": 1, "content_type": 9, "object_id": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e", "object_repr": "\u041a\u043e\u0440\u0435\u043b\u043b\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2020-02-29T22:26:55.431Z", "user": 1, "content_type": 9, "object_id": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e", "object_repr": "\u043a\u043e\u0440\u0435\u043b\u043b\u0430", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"name\", \"code\"]}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2020-02-29T22:27:03.383Z", "user": 1, "content_type": 10, "object_id": "70a41546-3381-4d13-be73-3096ef0cbe0b", "object_repr": "\u0413\u043e\u0448\u0430 (\u043a\u043e\u0440\u0435\u043b\u043b\u0430, 1 \u0433\u043e\u0434)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2020-02-29T22:29:50.089Z", "user": 1, "content_type": 8, "object_id": "149d7085-cdad-478a-9b75-3d74226a7152", "object_repr": "29-02-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2020-02-29T22:31:06.589Z", "user": 1, "content_type": 11, "object_id": "718fe547-0574-4c04-8795-7e594e088c4e", "object_repr": "\u0441\u043e\u0431\u0430\u043a\u0430", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"name\", \"code\"]}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2020-02-29T22:31:18.898Z", "user": 1, "content_type": 11, "object_id": "166941d7-672d-438a-8f7c-2648715f8872", "object_repr": "\u043a\u043e\u0448\u043a\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2020-02-29T22:31:39.160Z", "user": 1, "content_type": 9, "object_id": "976df73f-aa7e-436d-8898-a24dc6f3c499", "object_repr": "\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0448\u043a\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2020-02-29T22:32:53.795Z", "user": 1, "content_type": 10, "object_id": "517d137a-d05e-48bc-b1c0-cfeb09e06f23", "object_repr": "\u0411\u0430\u0440\u043e\u043d (\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0448\u043a\u0430, 2 \u0433\u043e\u0434\u0430)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2020-02-29T22:33:14.908Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "\u0414\u0436\u0438\u043d (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2020-02-29T22:34:15.911Z", "user": 1, "content_type": 9, "object_id": "ce8e2940-9a60-4de7-85f7-7e49759fa080", "object_repr": "\u043f\u0438\u0442\u0431\u0443\u043b\u044c", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2020-02-29T22:34:21.650Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "\u0424\u0435\u043b\u0438\u043a\u0441 (\u043f\u0438\u0442\u0431\u0443\u043b\u044c, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"name\", \"age\", \"photo\", \"breed\"]}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2020-02-29T22:35:14.291Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "\u0414\u0436\u0438\u043d (\u0441\u0442\u0430\u0444\u043e\u0440\u0434, 4 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"age\", \"photo\"]}}]"}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2020-02-29T22:35:47.800Z", "user": 1, "content_type": 9, "object_id": "c8455311-4159-4324-b248-611555a3550e", "object_repr": "\u0441\u0442\u0430\u0444\u0444\u043e\u0440\u0434", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"name\", \"code\"]}}]"}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2020-02-29T22:35:48.956Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "\u0414\u0436\u0438\u043d (\u0441\u0442\u0430\u0444\u0444\u043e\u0440\u0434, 4 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2020-02-29T22:36:33.065Z", "user": 1, "content_type": 8, "object_id": "af3e10fb-edb0-4df7-957b-0288016d6e94", "object_repr": "29-02-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2020-02-29T22:37:36.226Z", "user": 1, "content_type": 9, "object_id": "23a6844a-42cc-48c4-953a-b13ba8be8292", "object_repr": "\u0442\u0430\u043a\u0441\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2020-02-29T22:37:40.421Z", "user": 1, "content_type": 10, "object_id": "aa4dc898-b9ed-4d0f-bd73-de6bc39285ac", "object_repr": "\u041b\u0438\u043d\u0434\u0430 (\u0442\u0430\u043a\u0441\u0430, 2 \u0433\u043e\u0434\u0430)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2020-03-01T08:19:08.135Z", "user": 1, "content_type": 8, "object_id": "0f5f3ce6-de66-4161-9628-6e713166d456", "object_repr": "01-03-2020", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2020-03-01T08:21:46.709Z", "user": 1, "content_type": 9, "object_id": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d", "object_repr": "\u043d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u043e\u0432\u0447\u0430\u0440\u043a\u0430", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2020-03-01T08:21:53.324Z", "user": 1, "content_type": 10, "object_id": "a9297832-56e5-4949-9ac6-88b7973e1807", "object_repr": "\u041c\u0443\u0445\u0442\u0430\u0440 (\u043d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u043e\u0432\u0447\u0430\u0440\u043a\u0430, 0 \u043b\u0435\u0442)", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2020-03-01T08:22:12.462Z", "user": 1, "content_type": 10, "object_id": "a9297832-56e5-4949-9ac6-88b7973e1807", "object_repr": "\u041c\u0443\u0445\u0442\u0430\u0440 (\u043d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u043e\u0432\u0447\u0430\u0440\u043a\u0430, 0 \u043b\u0435\u0442)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2020-03-01T08:22:16.275Z", "user": 1, "content_type": 10, "object_id": "d140ffce-e7dc-4368-8f0c-062b150b7f0e", "object_repr": "\u0414\u0436\u0438\u043d (\u0441\u0442\u0430\u0444\u0444\u043e\u0440\u0434, 4 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2020-03-01T08:22:20.534Z", "user": 1, "content_type": 10, "object_id": "aa4dc898-b9ed-4d0f-bd73-de6bc39285ac", "object_repr": "\u041b\u0438\u043d\u0434\u0430 (\u0442\u0430\u043a\u0441\u0430, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2020-03-01T08:22:23.775Z", "user": 1, "content_type": 10, "object_id": "70a41546-3381-4d13-be73-3096ef0cbe0b", "object_repr": "\u0413\u043e\u0448\u0430 (\u043a\u043e\u0440\u0435\u043b\u043b\u0430, 1 \u0433\u043e\u0434)", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2020-03-01T08:22:27.344Z", "user": 1, "content_type": 10, "object_id": "517d137a-d05e-48bc-b1c0-cfeb09e06f23", "object_repr": "\u0411\u0430\u0440\u043e\u043d (\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0448\u043a\u0430, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2020-03-01T08:22:40.487Z", "user": 1, "content_type": 10, "object_id": "1708750b-f0ce-47ac-b5fa-b24310d167fd", "object_repr": "\u0424\u0435\u043b\u0438\u043a\u0441 (\u043f\u0438\u0442\u0431\u0443\u043b\u044c, 2 \u0433\u043e\u0434\u0430)", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"}}]
+[
+  {
+    "model": "petdocs.registration",
+    "pk": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1",
+    "fields": {
+      "reg_num": "\u043f24022020",
+      "date": "2020-02-24",
+      "cage": "\u041065\u0444"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "0f5f3ce6-de66-4161-9628-6e713166d456",
+    "fields": {
+      "reg_num": "\u043d01032020",
+      "date": "2020-03-01",
+      "cage": "\u042013"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "149d7085-cdad-478a-9b75-3d74226a7152",
+    "fields": {
+      "reg_num": "\u044129022020",
+      "date": "2020-02-29",
+      "cage": "\u041a8"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f",
+    "fields": {
+      "reg_num": "\u044123022020",
+      "date": "2020-02-23",
+      "cage": "F456d"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "97d9f821-77b2-4b6a-8bf5-3c49b9663361",
+    "fields": {
+      "reg_num": "\u043a29022020",
+      "date": "2020-02-29",
+      "cage": "\u04212"
+    }
+  },
+  {
+    "model": "petdocs.registration",
+    "pk": "af3e10fb-edb0-4df7-957b-0288016d6e94",
+    "fields": {
+      "reg_num": "\u044229022020",
+      "date": "2020-02-29",
+      "cage": "\u04113"
+    }
+  },
+  {
+    "model": "pets.gender",
+    "pk": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669",
+    "fields": {
+      "name": "\u043c\u0430\u043b\u044c\u0447\u0438\u043a",
+      "code": "m"
+    }
+  },
+  {
+    "model": "pets.gender",
+    "pk": "cb4131c2-484b-4cde-a9b1-223c8b43d472",
+    "fields": {
+      "name": "\u0434\u0435\u0432\u043e\u0447\u043a\u0430",
+      "code": "f"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "23a6844a-42cc-48c4-953a-b13ba8be8292",
+    "fields": {
+      "name": "\u0442\u0430\u043a\u0441\u0430",
+      "code": "dachshund"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e",
+    "fields": {
+      "name": "\u043a\u043e\u0440\u0435\u043b\u043b\u0430",
+      "code": "cockatiel"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d",
+    "fields": {
+      "name": "\u043d\u0435\u043c\u0435\u0446\u043a\u0430\u044f \u043e\u0432\u0447\u0430\u0440\u043a\u0430",
+      "code": "german_shepherd"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "976df73f-aa7e-436d-8898-a24dc6f3c499",
+    "fields": {
+      "name": "\u0441\u0438\u0431\u0438\u0440\u0441\u043a\u0430\u044f \u043a\u043e\u0448\u043a\u0430",
+      "code": "siberian_cat"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "c8455311-4159-4324-b248-611555a3550e",
+    "fields": {
+      "name": "\u0441\u0442\u0430\u0444\u0444\u043e\u0440\u0434",
+      "code": "stafford"
+    }
+  },
+  {
+    "model": "pets.breed",
+    "pk": "ce8e2940-9a60-4de7-85f7-7e49759fa080",
+    "fields": {
+      "name": "\u043f\u0438\u0442\u0431\u0443\u043b\u044c",
+      "code": "pitbull"
+    }
+  },
+  {
+    "model": "pets.species",
+    "pk": "166941d7-672d-438a-8f7c-2648715f8872",
+    "fields": {
+      "name": "\u043a\u043e\u0448\u043a\u0430",
+      "code": "cat"
+    }
+  },
+  {
+    "model": "pets.species",
+    "pk": "4628a324-09f3-4120-ba9f-862a9e17fcec",
+    "fields": {
+      "name": "\u043f\u043e\u043f\u0443\u0433\u0430\u0439",
+      "code": "parrot"
+    }
+  },
+  {
+    "model": "pets.species",
+    "pk": "718fe547-0574-4c04-8795-7e594e088c4e",
+    "fields": {
+      "name": "\u0441\u043e\u0431\u0430\u043a\u0430",
+      "code": "dog"
+    }
+  },
+  {
+    "model": "pets.petstatus",
+    "pk": "076ea473-532c-443e-b7ee-f60b060d6bb2",
+    "fields": {
+      "name": "\u0445\u043e\u0442\u044f\u0442 \u0437\u0430\u0431\u0440\u0430\u0442\u044c",
+      "code": "wait_home"
+    }
+  },
+  {
+    "model": "pets.petstatus",
+    "pk": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
+    "fields": {
+      "name": "\u0431\u0435\u0437 \u0434\u043e\u043c\u0430",
+      "code": "out_home"
+    }
+  },
+  {
+    "model": "pets.petstatus",
+    "pk": "fd9e6009-0294-43a1-81ab-e787ad65496d",
+    "fields": {
+      "name": "\u043f\u0440\u0438\u044e\u0442\u0438\u043b\u0438",
+      "code": "at_home"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "1708750b-f0ce-47ac-b5fa-b24310d167fd",
+    "fields": {
+      "name": "\u0424\u0435\u043b\u0438\u043a\u0441",
+      "age": 2,
+      "doc": "0bce1486-6bab-4cd4-a466-94d4cfdf3fd1",
+      "photo": "img/felix.jpeg",
+      "species": "718fe547-0574-4c04-8795-7e594e088c4e",
+      "breed": "ce8e2940-9a60-4de7-85f7-7e49759fa080",
+      "owner": null,
+      "status": "076ea473-532c-443e-b7ee-f60b060d6bb2",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "517d137a-d05e-48bc-b1c0-cfeb09e06f23",
+    "fields": {
+      "name": "\u0411\u0430\u0440\u043e\u043d",
+      "age": 2,
+      "doc": "149d7085-cdad-478a-9b75-3d74226a7152",
+      "photo": "img/baron.jpeg",
+      "species": "166941d7-672d-438a-8f7c-2648715f8872",
+      "breed": "976df73f-aa7e-436d-8898-a24dc6f3c499",
+      "owner": null,
+      "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "70a41546-3381-4d13-be73-3096ef0cbe0b",
+    "fields": {
+      "name": "\u0413\u043e\u0448\u0430",
+      "age": 1,
+      "doc": "97d9f821-77b2-4b6a-8bf5-3c49b9663361",
+      "photo": "img/gosha.jpeg",
+      "species": "4628a324-09f3-4120-ba9f-862a9e17fcec",
+      "breed": "39e9a1d5-f069-4713-9729-ce5d3a8fc06e",
+      "owner": null,
+      "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "a9297832-56e5-4949-9ac6-88b7973e1807",
+    "fields": {
+      "name": "\u041c\u0443\u0445\u0442\u0430\u0440",
+      "age": 0,
+      "doc": "0f5f3ce6-de66-4161-9628-6e713166d456",
+      "photo": "img/grovcharka1.jpeg",
+      "species": "718fe547-0574-4c04-8795-7e594e088c4e",
+      "breed": "5a1b815b-0485-4cb7-a5d9-96b5aca6ff1d",
+      "owner": null,
+      "status": "076ea473-532c-443e-b7ee-f60b060d6bb2",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "aa4dc898-b9ed-4d0f-bd73-de6bc39285ac",
+    "fields": {
+      "name": "\u041b\u0438\u043d\u0434\u0430",
+      "age": 2,
+      "doc": "af3e10fb-edb0-4df7-957b-0288016d6e94",
+      "photo": "img/taksa1.jpeg",
+      "species": "718fe547-0574-4c04-8795-7e594e088c4e",
+      "breed": "23a6844a-42cc-48c4-953a-b13ba8be8292",
+      "owner": null,
+      "status": "fd9e6009-0294-43a1-81ab-e787ad65496d",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": "d140ffce-e7dc-4368-8f0c-062b150b7f0e",
+    "fields": {
+      "name": "\u0414\u0436\u0438\u043d",
+      "age": 4,
+      "doc": "185dcb1e-8c75-4d5d-9327-fcb5d9d92f6f",
+      "photo": "img/pit1.jpeg",
+      "species": "718fe547-0574-4c04-8795-7e594e088c4e",
+      "breed": "c8455311-4159-4324-b248-611555a3550e",
+      "owner": null,
+      "status": "765b5eb8-2ea3-4991-85cc-a011a9bb0b46",
+      "gender": "02add2fe-bd4b-4dd5-a74d-6fde41c9b669"
+    }
+  }
+]

@@ -239,7 +239,7 @@ export default {
                 let item = this.filter[key];
                 query[key + '__' + item.value_field] = this.selectFilter[key];
             }
-            query.name = this.selectFilter.name;
+            query.search = this.selectFilter.name;
             query.age = this.selectFilter.age;
             query.status__code = this.selectFilter.status__code;
             rest[this.model].get(query).then(res => {

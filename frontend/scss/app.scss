@@ -1,6 +1,7 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 @import 'node_modules/bootstrap-vue/src/icons.scss';
+@import 'icons.scss';
 @import 'petslist.scss';
 @import 'petcard.scss';
 @import 'shelter_req.scss';
@@ -49,9 +50,17 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-}
+    justify-content: center;
 
-.footer-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: flex;
+    
+    .footer-content {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .shared-icon {
+        position: absolute;
+        display: flex;
+        right: 30px;
+    }
 }

@@ -30,6 +30,12 @@
         </main>
         <div class="footer">
             <p class="footer-content">© дом питомца</p>
+            <div class="shared-icon">
+                <div class="instagram icon"/>
+                <div class="tik-tok icon"/>
+                <div class="youtube icon"/>
+                <div class="telegram icon"/>
+            </div>
         </div>
     </div>
 </template>

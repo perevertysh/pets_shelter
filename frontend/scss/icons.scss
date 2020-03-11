@@ -1,0 +1,20 @@
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    &.instagram {
+        background-image: url('~assets/icons/instagram_icon.png');
+    }
+    
+    &.telegram {
+        background-image: url('~assets/icons/telegram_icon.png');
+    }
+    
+    &.tik-tok {
+        background-image: url('~assets/icons/tik-tok_icon.png');
+    }
+    
+    &.youtube {
+        background-image: url('~assets/icons/youtube_icon.png');
+    }
+}

@@ -15,6 +15,9 @@
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
     .filter_col {
         min-width: 250px;
         margin-top: 15px;
@@ -41,12 +44,20 @@
             }
         }
     }
-    .pet_col {
-        min-width: 410px;
+    .pet_list {
+        margin-top: auto;
+        margin-bottom: auto;
+        .pet_col {
+            min-width: 410px;
+            margin-top: 50px;
+        }
     }
     .empty {
         text-align: center;
         font-size: 24px;
         color: rgba($color: #223F2C, $alpha: 0.89);
+    }
+    .pagination {
+        margin-top: auto !important;
     }
 }

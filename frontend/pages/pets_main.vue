@@ -84,7 +84,7 @@
                 </b-col>
             </b-row>
         </b-container>
-        <b-container fluid variant="info" v-if="items && items.length">
+        <b-container class="pet_list" fluid variant="info" v-if="items && items.length">
             <b-row align-h="around" cols="1" cols-sm="2" cols-md="2" cols-lg="3">
                 <b-col class="pet_col" v-for="(item, index) in items" :key="index">
                         <!-- v-if="item" -->

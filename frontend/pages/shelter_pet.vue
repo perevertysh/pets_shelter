@@ -12,7 +12,7 @@
                 </b-col>
             </b-row>
             <b-row v-for="field in fields" :key="field.key">
-                <b-col cols='4' class="right">field.name</b-col>
+                <b-col cols='4' class="right">{{field.name}}</b-col>
                 <b-col cols='8' class="left">
                     <b-form-input
                         :id='"input-" + field.field'
